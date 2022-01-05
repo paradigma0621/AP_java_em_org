@@ -1,0 +1,2963 @@
+* como mostrar código em java colorizado dentro do ORG:
+#+BEGIN_SRC java :results output :exports both
+public String getMyDefault() {
+    System.out.println("Getting Default Value");
+    return "Default Value";
+}
+#+END_SRC
+
+* Paguei R$ 79.99 que vão valer por 3 meses do site da Workana em 06/06/2021.
+ Pacote Starter
+33% Off R$ 120,00 = R$ 79,99
+-   Desfrute de um plano de assinatura Plus por 3 meses
+-   100 contatos extra de uma só vez (sem vencimento)
+
+A minha dúvida é se eu poderei usar desses 100 contatos extra ao longo do ano todo até eles acabarem. Uma dúvid: contatos=propostas de freelancer?
+
+* como fazer a leitura de um código em Java já pronto para entendê-lo? R: Fazer uma leitura rápida, depois uma leitura mais-ou-menos rápida, depois, ir indo fazendo leituras cada vez mais detalhistas
+
+Procurar por "AP:"
+* TODO ver esse video:
+https://www.youtube.com/watch?v=2sTz9aHsyRw
+25 Anos de Java: Fullstack Reativo com Spring e Angular com Loiane Groner
+
+* Java Pago?? A partir da LTS 11
+Tirado de: http://www.softblue.com.br/blog/java-vai-ser-pago/
+	 A regra agora é a seguinte: novas versões do Java saem a cada 6 meses, sempre em Março e Setembro. Essas são as chamadas _feature releases_, onde novos recursos da linguagem são incorporados.  E trimestralmente a Oracle vai liberar as _update releases_, compostas por atualizações de segurança e consertos de bugs (sem novos recursos).
+
+	 A versão LTS é uma versão focada em empresas, que buscam estabilidade, não podem ficar a cada 6 meses mudando a versão dos seus sistemas e que querem suporte da Oracle por mais tempo. Neste caso, serão 3 anos.  
+
+	O Java LTS será uma modalidade exclusiva do Oracle JDK (e não do OpenJDK, que é e sempre será gratuito), e as empresas terão que pagar por essa versão LTS.
+
+	Apenas as versões do Java qualificadas como LTS do OracleJDK serão pagas. O resto continuará sendo tudo free!
+
+** conversas
+Obs: o Pró é o Carlos Tosin
+*** conversa 1
+**** Gustavo Costa:
+Por isso, utilizo as linguagens de programação de código aberto. Java não é de código aberto. Veja como foram as confusões entre Google e Oracle. Fiquei contente que Java não é o meu forte.
+
+**** Resposta do Pró:
+Existem duas vertentes de JDK: O OracleJDK e o OpenJDK. O OpenJDK é 100% open source e vai continuar dessa forma. A briga do Google com a Oracle foi justamente porque a Google usava partes do JDK da Oracle no Android, e a Oracle não gostou. Hoje o Android se apoia no OpenJDK e tá tudo resolvido. Aliás, existem algumas diferenças no OracleJDK e no OpenJDK, mas a Oracle já informou que tem uma equipe justamente focada em deixar ambos o mais semelhante possível, num esforço de aumentar a adoção do OpenJDK pra quem tiver interesse.
+
+*** conversa 2
+**** Pessoa RPC:
+Para ser franco acredito que maquina JAVA versão grátis será cheia de bugs o tempo todo, só para forçar o desenvolvedor focar para a versão grátis, em resumo não compensa mais focar no java, esta compensado migrar para o C# para evitar esse monopólio da SUN antes que prejudique os desevolvedores
+
+**** Resposta do Pró:
+De forma alguma. O JDK é um só, o processo de desenvolvimento é um só. Não existe o desenvolvimento do OpenJDK e o desenvolvimento do OracleJDK: é uma coisa só. Sobre monopólio, também não existe. Já falei em outro vídeo: o Java NÃO é da Oracle (aliás, a Sun já deixou de existir faz tempo). O Java pertence à comunidade de desenvolvedores e o papel da Oracle é meramente de coordenação. Quem está por trás da evolução do Java são grandes empresas e grandes desenvolvedores.
+
+*** conversa 3 - quem roda os apps do java tem que pagar?
+**** Fernando
+Empresas que utilizam apenas pacotes OracleJRE precisarão adquirir a licença para baixar o pacote OracleJRE 11? Ou esse esquema de licenciamento vale apena para pacotes OracleJDK?
+
+**** Resposta do Pró:
+Essa questão toda de licenciamento é apenas pro OracleJDK. O JRE não é pra desenvolvimento, mas apenas pra execução de aplicações, e ele continua free como sempre.
+
+*** conversa 4
+
+**** Fabio Faria 
+Não entendi bem essa questão de suporte. Nós, pequenos desenvolvedores que hoje programamos na versão 8, após 2020 não conseguiremos mais programar na versão 8? A JVM não executará aplicações feitas na versão 8 após 2020? Poderia me esclarecer essas perguntas? Essa questão de suporte pago, qual seria esse suporte? O que muda com exceção do tempo de 3 anos? Desde já, agradeço!
+
+**** Resposta do Pró:
+Fabio, você vai poder continuar usando o Java 8 em 2020. O que vai acontecer é que a Oracle não vai mais disponibilizar atualizações de segurança pra essa versão. Das versões 9 em diante, a Oracle vai oferecer suporte por 6 meses, só até o lançamento da nova versão. Pra grandes empresas que precisam de mais tempo de suporte, elas vão poder usar o JDK da Oracle com LTS (Long Term Support), que vai garantir atualizações da Oracle por 3 anos. Só que as versões LTS são cobradas pela Oracle.
+
+*** conversa 5 - Para usar o Java RE 11 tem que pagar
+**** Wagner do Nascimento abril 27, 2018
+A utilização do java11 runtime é realmente gratuito? Clique para fazer o dowload do JRE 11 e License Agreements tem a seguinte declaração(abreviada com pontos….):
+“License Rights and Restrictions
+Oracle grants You a nonexclusive, nontransferable, limited license to internally use the Programs, subject to the restrictions stated in this Agreement and Program Documentation, only for the purpose of developing….
+Further, You may not:
+– use the Programs for any data processing or any commercial, production, or internal business purposes other than developing, testing, prototyping, and demonstrating your Application;….
+You must obtain from Oracle or an Oracle reseller a valid Programs license under a separate agreement permitting such use. However..”
+Como fica isto? Entendi errado?
+Obrigado!
+**** Carlos Tosin	abril 27, 2018
+O Oracle JDK 11 é a versão LTS (Long Term Support), e a licença é paga. Este é o JDK que empresas que desejam suporte da Oracle por 3 anos podem usar (se pagarem). O JDK 11 100% gratuito é o OpenJDK, que pode ser obtido em http://jdk.java.net/11.
+
+* Novas releases... o que foi aprimorado
+https://www.oracle.com/java/technologies/javase/jdk-relnotes-index.html
+* Bons tutoriais
+esse aqui é o mais completo, apesar de ser pro Java 8 (observar que é a Oracle quem fez esses tutoriais):
+https://docs.oracle.com/javase/tutorial/
+See JDK Release Notes (www.oracle.com/java/technologies/javase/jdk-relnotes-index.html) for information about new features, enhancements, and removed or deprecated options for all JDK releases.
+
+
+* --------
+canal Sou Java: https://www.youtube.com/channel/UCH0qj1HFZ9jy0w87YfMSA7w
+
+* email enviado pro StackOverflow
+** enviado ingles (desatualizado)
+openjfx-dev@openjdk.java.net
+
+Hi, Tomas!
+Sorry not sending this email to your personal/professional own email.
+If you don't mind, could you help me in a doubt?
+	I have been programming in Java for about the last one and half year. I did some small programs and learned about the main theory of the language. 
+	But I'm in doubt about witch is the better path to seek a job in a junior carreer inside a company.
+	I thought to code an editor that generates productivity graphics based in the clocks logged in ORG files and downloaded the RichTextFX in github, to stylize the code in my future program...  and I saw that it uses a lot of the Java library resources not mencioned in the internet Java courses (I did some ones in Udemy, and others).
+What's the bether way, having in mind that I want to get a Junior Java programming job vacancy in a company:
+   - Create a big project and put it on github, to gain more deep experience and have a portfolio
+   - Start to get  freelancer jobs to get experience
+   - to focus in examples projects (like RichTextFX, for example) and learn the Java Library and good practcy coding
+   - to study the progress in the library since Java 8
+   - to adquire good knowlegments in Design Patterns
+   - to start a big project, even not mastering good part of advanced stuff of the language
+   - try challenges problems sites to improve acknowledgement
+   - all of it mencioned toghether, divided
+??
+
+I would appreciate a lot your advice!
+Thanks,
+Lucas Favaro Borsatto
+
+** portugues (atualizado)
+Gostaria de te pedir uma orientação, na medida de tua disponibilidade:
+Programo em Java já faz um ano e meio. Fiz alguns pequenos programas e aprendi sobre a teoria principal da linguagem.
+Mas estou em dúvida qual é o melhor caminho para procurar emprego em uma carreira júnior dentro de uma empresa.
+Pensei em codar um editor que gere gráficos de produtividade com base em clocks-in/clocks-out registrados em arquivos ORG (Emacs) e baixei o RichTextFX no github, para usá-lo para estilizar o código em meu futuro programa ... e vi que ele usa muitos recursos da biblioteca Java não mencionado nos principais cursos de Java para internet (fiz alguns na Udemy, e outros).
+Qual é o melhor caminho para aperfeiçoamento, tendo em mente que quero conseguir uma vaga de trabalho de programação Java Júnior em uma empresa:
+   - Criar um projeto e colocá-lo no github, para ganhar mais experiência e ter um portfólio, mesmo não dominando boa parte das coisas avançadas da linguagem
+   - Começar como freelancer para obter experiência
+   - focar em projetos prontos como exemplo (como RichTextFX e outros do github) e aprender meios de utilizar a biblioteca do Java bem como adquirir boas práticas de programação
+   - adquirir bons conhecimentos em Design Patterns
+   - resolver desafios de programação em sites desse gênero
+   - estudar o progresso das bibliotecas desde Java 8
+   - Convém ler as descrições dos pacotes da documentação da última versão do Java (Java 16)? Me refiro a API (https://docs.oracle.com/en/java/javase/16/docs/api/index.html). 
+??
+Enfim: o que convém estudar para aprofundar mais o que é ensinado nos cursos (da Udemy por exemplo) que abordam de modo geral a linguagem?
+
+--------------------------
+Sorry, career advice is off-topic on Stack Overflow. 
+** Resposta do Marco (jogador de xadrez) em 31/03/2021
+Bom dia Professor!!
+Visando uma vaga de emprego de Júnior em Java é bacana ele saber:
+
+- Um pouco de aplicações Rest (isso está sendo muito solicitado)
+- Saber sobre testes (com JUnit mesmo)
+- Padrões de projetos é super importante saber
+- Tentar dominar o máximo uma ferramenta de versionamento (GIT)
+- Integrações com Banco de Dados, Montar Query’s...
+
+Se ele puder realizar projetos como freelancer, trabalhos da faculdade e até mesmo melhorias como ele citou no RichTextFX já conta bastante também.
+------
+abaixo msg enviada pelo amigo do Marco para o Marco - 31/03/2021
+Capi, o que tenho visto por ai é que as empresas estão pedinho para quem for trabalhar com Java  experência com web, construção de apis rest com o framework Spring Boot é o que esta em alta hoje. Quem se propor a trabalhar com web tem que conhecer um pouco do protocolo HTTP, HTML e javascript para entender o ambiente.
+ Banco de dados é uma coisa que já se espera que se saiba um pouco, além de bom manuseio das ferramentas de versionamento e IDEs.
+ Para aprender o que funciona bem comigo é simular embientes reais, você pode fazer isso construindo um site para um amigo ou parente, de graça mesmo, ou fazendo para colocar no seu Github.
+ Para aprender é sempre bom curar a fonte de informação, como seu amigo já tem um perfil academico acredito que ele tenha boa fontes.
+ Na Udemy tem um curso muito bacana do professor Nélio Alvez sobre Spring. No youtube o curso do canal DevDojo também é muito bom.
+
+-------------------------------
+	AP: Só pra fechar: que IDE você usa pra programar em Java? E outra coisa: quem programa em Java é Dev ou Coder? Qual a diferença entre eles?? Vale a pena ainda tirar o OCA de Java 8 ou é melhor esperar sair o Java 17 e fazer as provas de certificação desse último?
+	Pró: Minha preferida é o Netbeans, mas vejo a maioria usando Eclipse. O InteliJ tá sendo bem usado também. Desenvolvedor e programador e a mesma coisa rsrs. Não conheço ninguém que tenha certificação. Mercado tão carente que nem ingles estão pedindo mais. Mas creio que um Curriculum de um Junior com certificação seria algo que chamaria a atenção.
+-----------
+AP: Por último o Marco gravou um audio onde ele dizia para aprender banco de dados, que é algo que não muda tanto como os frameworks, e que por isso é uma boa aquisição de conhecimento. Ele diz:
+ - quando for Junior em programação, seja Pleno em  banco de dados
+ - quando for Pleno em programação, seja Sênior em banco de dados
+
+** Resposta do Rodrigo Graciano no Twitter em 30/03/2021  (@rodrigograciano)
+	Oi Lucas tudo bem?
+	Primeiro que bom que vc está se esforçando e procurando melhorar.
+Sobre seu início: eu gosto muito da ideia de estudar e colocar seus projetos no Github. Isso mostra que vc está estudando, aprendendo coisas novas.
+	Design patterns sao extremamente importantes, mas eu acho que não é obrigação de alguém começando a saber sobre eles. Então deixa mais pra frente.
+	Qualquer site tipo HackerRank sao legais, e vai te ajudar com a lógica, mas não vai ensinar sobre frameworks e outras coisas.
+	Se quer saber o que estudar, eu estudaria a linguagem em si. Dá uma olhada em uma feature, lê, implementa, escreve código e aí vai.
+	Entende o que o mercado está pedindo para as vagas de entrada e estuda. Tipo Spring Boot
+	Procura um JUG (Java User Group). No Brasil o SouJava é o maior. Eles produzem muito conteúdo, tem muita gente legal que pode te orientar.
+	Boa sorte com os estudos!
+* ----------
+site do palestrante do Sou Java: https://graciano.dev/
+* assistir o evento: https://www.youtube.com/playlist?list=PLnQIVBzL8WX4-D-dJoxAme-HL1ugeOI11
+video 1:
+https://www.youtube.com/watch?v=VMxC9zqboVA&list=PLnQIVBzL8WX4-D-dJoxAme-HL1ugeOI11&index=1
+
+* Aprendizados gerais
+** O que vem no Java SE:
+O Java SE (Standard Edition), a partir de agora, inclui os seguintes serviços:
+- JDK: Java Developer’s Kit, conjunto de ferramentas para desenvolvimento
+- JRE: Java Runtime Environment, ambiente de interpretação e execução.
+
+** applets
+http://www.softblue.com.br/blog/java-vai-ser-pago/
+*** conversa 6
+**** Gabriel Barbosa abril 27, 2018
+
+Carlos, então o java deste link https://www.java.com/pt_BR/download/chrome.jsp está na versão 8 ainda. Quando por exemplo tentamos entrar via banco para fazer um pagamento e os sites falam que precisamos atualizar o java, vamos sempre neste site, neste link. Esse tipo de aplicação está na versão 8 mas é a última que o site do java oferece. Pelo que vi, a versão 10 foi ao ar 2 meses atrás mas o site insiste em dizer que a versão 8 update 171 é a mais recente. Fico sem entender se esse java para rodar em sites, bancos por exemplo será afetado. Poderia me esclarecer? Abraços
+
+**** Pró: Carlos Tosin abril 27, 2018 
+Gabriel, o uso de Java nos navegadores está morrendo (ainda bem, pois realmente essa não é a praia do Java e só dava problemas). Nenhum banco mais usa applets (aplicações Java que rodam no cliente) e, se algum usa, vai deixar de usar logo, porque os navegadores estão tirando o suporte a applets Java (assim como tiraram do Flash).
+
+Portanto pode desconsiderar esse link do Chrome, pois Java rodando no navegador é algo que está morrendo já e vai ser sepultado logo, logo.
+
+Aliás, muita gente confunde o Java do lado cliente com o Java do lado servidor. No servidor, O Java vai muito bem e continua dominando! Qualquer dia faço um post sobre isso 
+* Certificação
+** O que mudou da 11 em relação a versão 8?
+Com a recente adoção da versão 11 e a modularização que vem desde o Java 9, novos recursos foram adicionados a linguagem e também as APIs.
+Mudança de escopo
+	Segundo o site enthuware que fornece várias mocks para os mais diversos exames, a primeira parte ficou um pouco mais difícil. Você vai precisar conhecer mais sobre genéricos, hierarquia de coleções e clonagem de arrays. Porém, foram removidas as perguntas referentes a API de data e hora.
+	Var e módulos passam a fazer parte do exame. Você precisará conhecer ambos completamente. Saber como codificar o module-info.java e sobre várias opções de linha de comando, como --module-path --show-module-resolution, e -m.
+
+* continuar em Item 2. 2 - Classes
+da *** Java SE 8 Programmer I Exam - https://docs.oracle.com/javase/tutorial/extra/certification/javase-8-programmer1.html
+https://docs.oracle.com/javase/tutorial/java/javaOO/classes.html
+
+* Java Advanced
+** bons tutoriais receita de bolo
+https://zetcode.com/
+
+** bons repositórios 
+*** (tirados de https://towardsdatascience.com/10-excellent-github-repositories-for-every-java-developer-41084a91ade9 )
+
+tudo de java:
+https://github.com/akullpp/awesome-java
+
+de design patterns:
+https://github.com/iluwatar/java-design-patterns
+
+dicas códigos para entrevistas:
+https://github.com/kdn251/interviews
+
+dicas códigos para entrevistas: - esse é bom tb para estudar Java por tópicos
+https://github.com/careercup/CtCI-6th-Edition/tree/master/Java
+
+códigos prontos de exemplo:
+https://github.com/TheAlgorithms/Java
+
+Java and Spring Tutorials
+https://github.com/eugenp/tutorials
+
+Functional Programming concepts (Lambda, Streams, Functional Interface, Parallel Streaming, etc.) 
+https://github.com/winterbe/java8-tutorial
+
+If you are working in Enterprise Java,...
+... In the Frontend, it offers the top 3 SPA framework (Angular, React, Vue), and in Backend, it offers Spring Boot. ...
+https://github.com/jhipster/generator-jhipster
+
+princípios de programação: https://java-design-patterns.com/principles/
+
+
+***  que eu encontrei
+https://github.com/janbodnar/Java-Advanced/tree/master/algorithms
+
+* conhecimentos de java diversos
+** lista de value-based classes
+These are all the classes I found in the JDK to be marked as value-based:
+
+java.util: Optional, OptionalDouble, OptionalLong, OptionalInt
+
+java.time: Duration, Instant, LocalDate, LocalDateTime, LocalTime, MonthDay, OffsetDateTime, OffsetTime, Period, Year, YearMonth, ZonedDateTime, ZoneId, ZoneOffset
+
+java.time.chrono: HijrahDate, JapaneseDate, MinguaDate, ThaiBuddhistDate
+
+** diferença entre identity e equality
+identity-sensitive operations 
+*** Identity
+
+When we talk about identity in computer science, we usually think of something that uniquely identifies a person or thing. In Java, we use references to uniquely identify objects. This is also called referential equality (yes, the naming is confusing). You use == to compare the identities of two objects.
+
+    Notice that identity is something external. A reference is not part of the object it simply points to the object. Another important point is identity doesn't change over time: As I get older, I'm going through a lot of changes, but I'm still the same person.
+	
+*** Equality
+
+Equality refers to two objects being the same. Two objects being equal doesn't necessarily mean that they are the same object. In Java, we use the equals() method to check if two objects are equal. This is also called structural equality.
+
+    Equality can always be decided by looking at the object only. You don't need any external information to decide equality. Equality can change over time: I'm not equal to the person that I was 20 years ago.
+** passando "um método" como argumento
+public class CustomCssMetaData<S extends Styleable, V> extends CssMetaData<S, V> {
+
+    private final Function<S, StyleableObjectProperty<V>> property;
+
+    CustomCssMetaData(String property, StyleConverter<?, V> converter, V initialValue,
+                      Function<S, StyleableObjectProperty<V>> getStyleableProperty) {
+        super(property, converter, initialValue);
+        this.property = getStyleableProperty;
+    }
+// é passado a Function como argumento dentro do construtor da classe????
+	
+
+* (tmp - pode apagar) moldes de Collections para pensar o Memorize do Console
+ListArray:
+	[1] -> Slide[1]: 
+		Front:therefore; 
+		Back: portanto, por isso, assim, assim sendo)
+	[2] -> Slide[2]:
+		Front:moreover
+		Back: além disso, além do que, ademais
+	[3] -> Slide[3]:
+		Front:though; 
+		Back: entretanto, trad3
+	[4] ->  Slide[4]:
+		Front: but
+		Back: mas, exceto
+--------------------------------------------------------------
+
+Set:
+	[] -> Slide[1]: 
+		Front:therefore; 
+		Back: portanto, por isso, assim, assim sendo)
+	[] -> Slide[2]:
+		Front:moreover
+		Back: além disso, além do que, ademais
+	[] -> Slide[3]:
+		Front:though; 
+		Back: entretanto, trad3
+	[] ->  Slide[4]:
+		Front: but
+		Back: mas, exceto
+--------------------------------------------------------------
+
+	Map:
+	[1, Slide[1]]: 
+		Front:therefore; 
+		Back: portanto, por isso, assim, assim sendo)
+	[2, Slide[2]]: 
+		Front:moreover
+		Back: além disso, além do que, ademais
+	[3, Slide[3]]: 
+		Front:though; 
+		Back: entretanto, trad3
+	[4, Slide[4]]: 
+		Front: but
+		Back: mas, exceto
+* Boas práticas de programação
+** Conhecimento 01
+*** Item 01
+**** O material inicial
+Fonte: https://www.alura.com.br/conteudo/java-collections?gclid=Cj0KCQjwgtWDBhDZARIsADEKwgNL2NSe051PWgsyoWR5T5-f9kTMKKGktB0Hz7DcNVQ4deCbZjTyhM8aApVIEALw_wcB
+
+Considere a classe Aula:
+-------------------------------------------
+public class Aula implements Comparable<Aula> {
+
+    private String titulo;
+    private int tempo;
+
+    public Aula(String titulo, int tempo) {
+        this.titulo = titulo;
+        this.tempo = tempo;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public int getTempo() {
+        return tempo;
+    }
+
+    @Override
+    public String toString() {
+        return "[Aula: " + this.titulo + ", " + this.tempo + " minutos]";
+    }
+
+    @Override
+    public int compareTo(Aula outraAula) {
+        return this.titulo.compareTo(outraAula.titulo);
+    }
+}
+--------------------------------------
+Considere agora a classe Curso:
+public class Curso {
+
+    private String nome;
+    private String instrutor;
+    private List<Aula> aulas = new LinkedList<Aula>();
+
+    public Curso(String nome, String instrutor) {
+        this.nome = nome;
+        this.instrutor = instrutor;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getInstrutor() {
+        return instrutor;
+    }
+
+    public List<Aula> getAulas() {
+        return aulas;
+    }
+}
+---------------------------------------
+Como adicionar objetos Aula em instâncias de Curso???
+Uma forma:
+public class TestaCurso {
+
+    public static void main(String[] args) {
+
+        Curso javaColecoes = new Curso("Dominando as coleções do Java",
+                "Paulo Silveira");
+
+        javaColecoes.getAulas().add(new Aula("Trabalhando com ArrayList", 21));
+        System.out.println(aulas);        
+    }
+}
+-----
+O que rodando resulta:
+[Aula: Trabalhando com ArrayList, 21 minutos]
+--------------
+**** O ensino:
+Apenas a classe Curso deve ter acesso às aulas
+
+É comum aparecer trechos de código como javaColecoes.getAulas().add(...). É até fácil de ler: pegamos o curso javaColecoes, para depois pegar suas aulas e aí então adicionar uma nova aula.
+
+Mas acabamos violando alguns princípios bons de orientação a objetos. Nesse caso, seria interessante que fosse necessário pedir a classe Curso para que fosse adicionada uma Aula, possibilitando fazer algo como javaColecoes.adiciona(...). E isso é fácil: basta adicionarmos esse método em Curso:
+public class Curso {
+
+    private String nome;
+    private String instrutor;
+    private List<Aula> aulas = new LinkedList<Aula>();
+
+    public Curso(String nome, String instrutor) {
+        this.nome = nome;
+        this.instrutor = instrutor;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getInstrutor() {
+        return instrutor;
+    }
+
+    public List<Aula> getAulas() {
+        return aulas;
+    }
+
+    public void adiciona(Aula aula) {
+        this.aulas.add(aula);
+    }
+}
+----------------------------------------------
+E com isso podemos fazer:
+
+public class TestaCurso {
+
+    public static void main(String[] args) {
+
+        Curso javaColecoes = new Curso("Dominando as coleções do Java",
+                    "Paulo Silveira");
+
+        javaColecoes.adiciona(new Aula("Trabalhando com ArrayList", 21));
+        javaColecoes.adiciona(new Aula("Criando uma Aula", 20));
+        javaColecoes.adiciona(new Aula("Modelando com coleções", 24));
+
+        System.out.println(javaColecoes.getAulas());
+    }
+}
+**** Mais aprendizado: Programação Defensiva
+<<Collections.unmodifiableList>>
+Mas quando alguém for usar a classe Curso, ela vai acabar fazendo javaColecoes.adiciona(...) ou javaColecoes.getAulas().add(...)? Se deixarmos assim, ele poderá fazer de ambas as formas.
+
+Queremos que ele só faça da primeira forma, usando nosso novo método adiciona. Como forçar isso? Não há como forçar, mas há como programar defensivamente, fazendo com que o método getAulas devolva uma cópia da coleção de aulas. Melhor ainda: podemos devolver essa cópia de tal forma que ela não possa ser alterada, ou seja, que ela seja não modificável, usando o método Collections.unmodifiableList:
+
+public class Curso {
+    /// restante do código...
+
+    public List<Aula> getAulas() {
+        return Collections.unmodifiableList(aulas);
+    }
+}
+
+Veja o código completo abaixo e faça o teste:
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Collections;
+
+public class TestaCurso {
+    public static void main(String[] args) {
+        Curso javaColecoes = new Curso("Dominando as colecoes do Java",
+                    "Paulo Silveira");
+
+        javaColecoes.adiciona(new Aula("Trabalhando com ArrayList", 21));
+        javaColecoes.adiciona(new Aula("Criando uma Aula", 20));
+        javaColecoes.adiciona(new Aula("Modelando com colecoes", 24));
+
+        // tentando adicionar da maneira "antiga". Podemos fazer isso? Teste:
+        javaColecoes.getAulas().add(new Aula("Trabalhando com ArrayList", 21));
+
+        System.out.println(javaColecoes.getAulas());
+    }
+}
+
+--------------------------------
+Resultado:
+Repare que uma exception será lançada ao tentarmos executar javaColecoes.getAulas().add. Qualquer tentativa de modificação vai lançar essa exception, indicando algo como "opa! você não pode alterar o estado dessa coleção aqui, encontre outra forma de fazer o que você quer".
+
+* Java 16 API
+** Collections
+[[iterators_List][sobreIterators]] (LINK) (Texto que acredito que serve para qualquer tipo de collection, não para apenas List)
+
+
+*** Recursos
+**** [[Collections.unmodifiableList][Collections.unmodifiableList]]
+*** Lists 
+**** Diferença entre ArrayList e LinkedList
+Fonte: https://www.alura.com.br/conteudo/java-collections?gclid=Cj0KCQjwgtWDBhDZARIsADEKwgNL2NSe051PWgsyoWR5T5-f9kTMKKGktB0Hz7DcNVQ4deCbZjTyhM8aApVIEALw_wcB
+
+E o mistério da LinkedList? E se tivéssemos usado ArrayList na declaração do atributo aulas da classe Curso? O resultado seria exatamente o mesmo!
+
+Então qual é a diferença? Basicamente performance. O ArrayList, como diz o nome, internamente usa um array para guardar os elementos. Ele consegue fazer operações de maneira muito eficiente, como invocar o método get(indice). Se você precisa pegar o décimo quinto elemento, ele te devolverá isso bem rápido. Quando um ArrayList é lento? Quando você for, por exemplo, inserir um novo elemento na primeira posição. Pois a implementação vai precisar mover todos os elementos que estão no começo da lista para a próxima posição. Se há muitos elementos, isso vai demorar... Em computação, chamamos isso de consumo de tempo linear.
+
+Já o LinkedList possui uma grande vantagem aqui. Ele utiliza a estrutura de dados chamada lista ligada, e é bastante rápido para adicionar e remover elementos na cabeça da lista, isto é, na primeira posição. Mas é lento se você precisar acessar um determinado elemento, pois a implementação precisará percorrer todos os elementos até chegar ao décimo quinto, por exemplo.
+
+**** ArrayList
+Each ArrayList instance has a capacity. The capacity is the size of the array used to store the elements in the list. It is always at least as large as the list size. As elements are added to an ArrayList, its capacity grows automatically. The details of the growth policy are not specified beyond the fact that adding an element has constant amortized time cost.
+
+An application can increase the capacity of an ArrayList instance before adding a large number of elements using the ensureCapacity operation. This may reduce the amount of incremental reallocation. 
+
+**** AbstractList
+
+To implement an unmodifiable list, the programmer needs only to extend this class and provide implementations for the get(int) and size() methods. 
+
+To implement a modifiable list, the programmer must additionally override the set(int, E) method (which otherwise throws an
+UnsupportedOperationException). If the list is variable-size the programmer must additionally override the add(int, E) and remove(int) methods. 
+
+**** Teoria do tutorial da Oracle de Java 8
+A List is an ordered Collection (sometimes called a sequence). Lists may contain duplicate elements. In addition to the
+operations inherited from Collection, the List interface includes operations for the following:
+
+- Positional access  manipulates elements based on their numerical position in the list. This includes methods such as get, set, add, addAll, and remove.
+- Search  searches for a specified object in the list and returns its numerical position. Search methods include indexOf and lastIndexOf.
+- Iteration  extends Iterator semantics to take advantage of the list's sequential nature. The listIterator  methods provide  this behavior.
+- Range-view  The sublist method performs arbitrary range operations on the list.
+
+The Java platform contains two general-purpose List implementations. ArrayList, which is usually the better-performing implementation, and LinkedList which offers better performance under certain circumstances. 
+--------------------------------------
+Collection Operations
+
+The operations inherited from Collection all do about what you'd expect them to do, assuming you're already familiar with them. If you're not familiar with them from Collection, now would be a good time to read The Collection Interface section. The remove operation always removes the first occurrence of the specified element from the list. The add and addAll operations always append the new element(s) to the end of the list. Thus, the following idiom concatenates one list to another.
+
+list1.addAll(list2);
+---------
+And here's an example (JDK 8 and later) that aggregates some names into a List:
+
+List<String> list = people.stream()
+.map(Person::getName)
+.collect(Collectors.toList());
+
+Like the Set interface, List strengthens the requirements on the equals and hashCode methods so that two List objects can be compared for logical equality without regard to their implementation classes. Two List objects are equal if they contain the same elements in the same order.
+----------------------------------------------------------------------------------
+
+Positional Access and Search Operations
+
+The basic positional access operations are get, set, add and remove. (The set and remove operations return the old value that is being overwritten or removed.) Other operations (indexOf and lastIndexOf) return the first or last index of the specified element in the list.
+
+The addAll operation inserts all the elements of the specified Collection starting at the specified position. The elements are inserted in the order they are returned by the specified Collection's iterator. This call is the positional access analog of Collection's addAll operation.
+-------------------------------------------------------------------------------
+**** Arrays
+In fact, this program can be made even shorter and faster. The Arrays class has a static factory method called asList, which allows an array to be viewed as a List. This method does not copy the array. Changes in the List write through to the array and vice versa. The resulting List is not a general-purpose List implementation, because it doesn't implement the (optional) add and remove operations: Arrays are not resizable. 
+
+
+**** Iterators
+<<iterators_List>> (Texto que acredito que serve para qualquer tipo de collection, não para apenas List)
+
+As you'd expect, the Iterator returned by List's iterator operation returns the elements of the list in proper sequence. List also provides a richer iterator, called a ListIterator, which allows you to traverse the list in either direction, modify the list during iteration, and obtain the current position of the iterator.
+
+The three methods that ListIterator inherits from Iterator (hasNext, next, and remove) do exactly the same thing in both interfaces. The hasPrevious and the previous operations are exact analogues of hasNext and next. The former operations refer to the element before the (implicit) cursor, whereas the latter refer to the element after the cursor. The previous operation moves the cursor backward, whereas next moves it forward.
+
+Here's the standard idiom for iterating backward through a list.
+
+for (ListIterator<Type> it = list.listIterator(list.size()); it.hasPrevious(); ) {
+    Type t = it.previous();
+    ...
+}
+
+Note the argument to listIterator in the preceding idiom. The List interface has two forms of the listIterator method. The form with no arguments returns a ListIterator positioned at the beginning of the list; the form with an int argument returns a ListIterator positioned at the specified index. The index refers to the element that would be returned by an initial call to next. An initial call to previous would return the element whose index was index-1. In a list of length n, there are n+1 valid values for index, from 0 to n, inclusive.
+
+Intuitively speaking, the cursor is always between two elements — the one that would be returned by a call to previous and the one that would be returned by a call to next. The n+1 valid index values correspond to the n+1 gaps between elements, from the gap before the first element to the gap after the last one. The following figure shows the five possible cursor positions in a list containing four elements.
+Five arrows representing five cursor positions, from 0 to 4, with four elements, one between each arrow.
+
+Five arrows representing five cursor positions, from 0 to 4, with four elements, one between each arrow.
+The five possible cursor positions. (se não tiver aparecendo imagem, ver na page: https://docs.oracle.com/javase/tutorial/collections/interfaces/list.html)
+
+Calls to next and previous can be intermixed, but you have to be a bit careful. The first call to previous returns the same element as the last call to next. Similarly, the first call to next after a sequence of calls to previous returns the same element as the last call to previous.
+
+It should come as no surprise that the nextIndex method returns the index of the element that would be returned by a subsequent call to next, and previousIndex returns the index of the element that would be returned by a subsequent call to previous. These calls are typically used either to report the position where something was found or to record the position of the ListIterator so that another ListIterator with identical position can be created.
+
+It should also come as no surprise that the number returned by nextIndex is always one greater than the number returned by previousIndex. This implies the behavior of the two boundary cases: (1) a call to previousIndex when the cursor is before the initial element returns -1 and (2) a call to nextIndex when the cursor is after the final element returns list.size(). To make all this concrete, the following is a possible implementation of List.indexOf.
+
+public int indexOf(E e) {
+    for (ListIterator<E> it = listIterator(); it.hasNext(); )
+        if (e == null ? it.next() == null : e.equals(it.next()))
+            return it.previousIndex();
+    // Element not found
+    return -1;
+}
+
+Note that the indexOf method returns it.previousIndex() even though it is traversing the list in the forward direction. The reason is that it.nextIndex() would return the index of the element we are about to examine, and we want to return the index of the element we just examined.
+
+The Iterator interface provides the remove operation to remove the last element returned by next from the Collection. For ListIterator, this operation removes the last element returned by next or previous. The ListIterator interface provides two additional operations to modify the list — set and add. The set method overwrites the last element returned by next or previous with the specified element. The following polymorphic algorithm uses set to replace all occurrences of one specified value with another.
+
+public static <E> void replace(List<E> list, E val, E newVal) {
+    for (ListIterator<E> it = list.listIterator(); it.hasNext(); )
+        if (val == null ? it.next() == null : val.equals(it.next()))
+            it.set(newVal);
+}
+
+The only bit of trickiness in this example is the equality test between val and it.next. You need to special-case a val value of null to prevent a NullPointerException.
+
+The add method inserts a new element into the list immediately before the current cursor position. This method is illustrated in the following polymorphic algorithm to replace all occurrences of a specified value with the sequence of values contained in the specified list.
+
+public static <E> 
+    void replace(List<E> list, E val, List<? extends E> newVals) {
+    for (ListIterator<E> it = list.listIterator(); it.hasNext(); ){
+        if (val == null ? it.next() == null : val.equals(it.next())) {
+            it.remove();
+            for (E e : newVals)
+                it.add(e);
+        }
+    }
+}
+
+**** Range-View Operation (uso de sublist)
+
+The range-view operation, subList(int fromIndex, int toIndex), returns a List view of the portion of this list whose indices range from fromIndex, inclusive, to toIndex, exclusive. This half-open range mirrors the typical for loop.
+
+for (int i = fromIndex; i < toIndex; i++) {
+    ...
+}
+
+As the term view implies, the returned List is backed up by the List on which subList was called, so changes in the former are reflected in the latter.
+
+This method eliminates the need for explicit range operations (of the sort that commonly exist for arrays). Any operation that expects a List can be used as a range operation by passing a subList view instead of a whole List. For example, the following idiom removes a range of elements from a List.
+
+list.subList(fromIndex, toIndex).clear();
+
+Similar idioms can be constructed to search for an element in a range.
+
+int i = list.subList(fromIndex, toIndex).indexOf(o);
+int j = list.subList(fromIndex, toIndex).lastIndexOf(o);
+
+Note that the preceding idioms return the index of the found element in the subList, not the index in the backing List.
+
+Any polymorphic algorithm that operates on a List, such as the replace and shuffle examples, works with the List returned by subList.
+
+Here's a polymorphic algorithm whose implementation uses subList to deal a hand from a deck. That is, it returns a new List (the "hand") containing the specified number of elements taken from the end of the specified List (the "deck"). The elements returned in the hand are removed from the deck.
+
+public static <E> List<E> dealHand(List<E> deck, int n) {
+    int deckSize = deck.size();
+    List<E> handView = deck.subList(deckSize - n, deckSize);
+    List<E> hand = new ArrayList<E>(handView);
+    handView.clear();
+    return hand;
+}
+
+Note that this algorithm removes the hand from the end of the deck. For many common List implementations, such as ArrayList, the performance of removing elements from the end of the list is substantially better than that of removing elements from the beginning.
+
+The following is a program that uses the dealHand method in combination with Collections.shuffle to generate hands from a normal 52-card deck. The program takes two command-line arguments: (1) the number of hands to deal and (2) the number of cards in each hand.
+
+import java.util.*;
+
+public class Deal {
+    public static void main(String[] args) {
+        if (args.length < 2) {
+            System.out.println("Usage: Deal hands cards");
+            return;
+        }
+        int numHands = Integer.parseInt(args[0]);
+        int cardsPerHand = Integer.parseInt(args[1]);
+    
+        // Make a normal 52-card deck.
+        String[] suit = new String[] {
+            "spades", "hearts", 
+            "diamonds", "clubs" 
+        };
+        String[] rank = new String[] {
+            "ace", "2", "3", "4",
+            "5", "6", "7", "8", "9", "10", 
+            "jack", "queen", "king" 
+        };
+
+        List<String> deck = new ArrayList<String>();
+        for (int i = 0; i < suit.length; i++)
+            for (int j = 0; j < rank.length; j++)
+                deck.add(rank[j] + " of " + suit[i]);
+    
+        // Shuffle the deck.
+        Collections.shuffle(deck);
+    
+        if (numHands * cardsPerHand > deck.size()) {
+            System.out.println("Not enough cards.");
+            return;
+        }
+    
+        for (int i = 0; i < numHands; i++)
+            System.out.println(dealHand(deck, cardsPerHand));
+    }
+  
+    public static <E> List<E> dealHand(List<E> deck, int n) {
+        int deckSize = deck.size();
+        List<E> handView = deck.subList(deckSize - n, deckSize);
+        List<E> hand = new ArrayList<E>(handView);
+        handView.clear();
+        return hand;
+    }
+}
+
+Running the program produces output like the following.
+
+% java Deal 4 5
+
+[8 of hearts, jack of spades, 3 of spades, 4 of spades,
+    king of diamonds]
+[4 of diamonds, ace of clubs, 6 of clubs, jack of hearts,
+    queen of hearts]
+[7 of spades, 5 of spades, 2 of diamonds, queen of diamonds,
+    9 of clubs]
+[8 of spades, 6 of diamonds, ace of spades, 3 of hearts,
+    ace of hearts]
+
+Although the subList operation is extremely powerful, some care must be exercised when using it. The semantics of the List returned by subList become undefined if elements are added to or removed from the backing List in any way other than via the returned List. Thus, it's highly recommended that you use the List returned by subList only as a transient object — to perform one or a sequence of range operations on the backing List. The longer you use the subList instance, the greater the probability that you'll compromise it by modifying the backing List directly or through another subList object. Note that it is legal to modify a sublist of a sublist and to continue using the original sublist (though not concurrently).
+
+
+
+
+
+
+
+**** Métodos gerais de List	
+List Algorithms
+
+Most polymorphic algorithms in the Collections class apply specifically to List. Having all these algorithms at your disposal makes it very easy to manipulate lists. Here's a summary of these algorithms, which are described in more detail in the Algorithms section.
+
+    sort — sorts a List using a merge sort algorithm, which provides a fast, stable sort. (A stable sort is one that does not reorder equal elements.)
+    shuffle — randomly permutes the elements in a List.
+    reverse — reverses the order of the elements in a List.
+    rotate — rotates all the elements in a List by a specified distance.
+    swap — swaps the elements at specified positions in a List.
+    replaceAll — replaces all occurrences of one specified value with another.
+    fill — overwrites every element in a List with the specified value.
+    copy — copies the source List into the destination List.
+    binarySearch — searches for an element in an ordered List using the binary search algorithm.
+    indexOfSubList — returns the index of the first sublist of one List that is equal to another.
+    lastIndexOfSubList — returns the index of the last sublist of one List that is equal to another.
+
+*** Queue
+Queues typically, but not necessarily, order elements in a FIFO (first-in-first-out) manner. Among the exceptions are priority queues, which order elements according to their values — see the Object Ordering section for details). Whatever ordering is used, the head of the queue is the element that would be removed by a call to remove or poll. In a FIFO queue, all new elements are inserted at the tail of the queue. Other kinds of queues may use different placement rules. Every Queue implementation must specify its ordering properties.
+
+It is possible for a Queue implementation to restrict the number of elements that it holds; such queues are known as bounded. Some Queue implementations in java.util.concurrent are bounded, but the implementations in java.util are not.
+
+The add method, which Queue inherits from Collection, inserts an element unless it would violate the queue's capacity restrictions, in which case it throws IllegalStateException. The offer method, which is intended solely for use on bounded queues, differs from add only in that it indicates failure to insert an element by returning false.
+
+The remove and poll methods both remove and return the head of the queue. Exactly which element gets removed is a function of the queue's ordering policy. The remove and poll methods differ in their behavior only when the queue is empty. Under these circumstances, remove throws NoSuchElementException, while poll returns null.
+
+The element and peek methods return, but do not remove, the head of the queue. They differ from one another in precisely the same fashion as remove and poll: If the queue is empty, element throws NoSuchElementException, while peek returns null.
+
+Queue implementations generally do not allow insertion of null elements. The LinkedList implementation, which was retrofitted to implement Queue, is an exception. For historical reasons, it permits null elements, but you should refrain from taking advantage of this, because null is used as a special return value by the poll and peek methods.
+
+Queue implementations generally do not define element-based versions of the equals and hashCode methods but instead inherit the identity-based versions from Object.
+
+The Queue interface does not define the blocking queue methods, which are common in concurrent programming. These methods, which wait for elements to appear or for space to become available, are defined in the interface java.util.concurrent.BlockingQueue, which extends Queue.
+
+**** Exemplo
+In the following example program, a queue is used to implement a countdown timer. The queue is preloaded with all the integer values from a number specified on the command line to zero, in descending order. Then, the values are removed from the queue and printed at one-second intervals. The program is artificial in that it would be more natural to do the same thing without using a queue, but it illustrates the use of a queue to store elements prior to subsequent processing.
+
+import java.util.*;
+
+public class Countdown {
+    public static void main(String[] args) throws InterruptedException {
+        int time = Integer.parseInt(args[0]);
+        Queue<Integer> queue = new LinkedList<Integer>();
+
+        for (int i = time; i >= 0; i--)
+            queue.add(i);
+
+        while (!queue.isEmpty()) {
+            System.out.println(queue.remove());
+            Thread.sleep(1000);
+        }
+    }
+}
+**** PriorityQueue
+In the following example, a priority queue is used to sort a collection of elements. Again this program is artificial in that there is no reason to use it in favor of the sort method provided in Collections, but it illustrates the behavior of priority queues.
+
+static <E> List<E> heapSort(Collection<E> c) {
+    Queue<E> queue = new PriorityQueue<E>(c);
+    List<E> result = new ArrayList<E>();
+
+    while (!queue.isEmpty())
+        result.add(queue.remove());
+
+    return result;
+}
+
+*** Set
+The Java platform contains three general-purpose Set implementations: HashSet, TreeSet, and LinkedHashSet. 
+**** HashSet, which stores its elements in a hash table, is the best-performing implementation; however it makes no guarantees concerning the order of iteration.
+**** TreeSet, which stores its elements in a red-black tree, orders its elements based on their values; it is substantially slower than HashSet. 
+**** LinkedHashSet, which is implemented as a hash table with a linked list running through it, orders its elements based on the order in which they were inserted into the set (insertion-order). LinkedHashSet spares its clients from the unspecified, generally chaotic ordering provided by HashSet at a cost that is only slightly higher.
+**** exenplos de códigos 01
+Here's a simple but useful Set idiom. Suppose you have a Collection, c, and you want to create another Collection containing the same elements but with all duplicates eliminated. The following one-liner does the trick.
+
+Collection<Type> noDups = new HashSet<Type>(c);
+
+It works by creating a Set (which, by definition, cannot contain duplicates), initially containing all the elements in c. It uses the standard conversion constructor described in the The Collection Interface section.
+
+Or, if using JDK 8 or later, you could easily collect into a Set using aggregate operations:
+
+c.stream()
+.collect(Collectors.toSet()); // no duplicates
+
+Here's a slightly longer example that accumulates a Collection of names into a TreeSet:
+
+Set<String> set = people.stream()
+.map(Person::getName)
+.collect(Collectors.toCollection(TreeSet::new));
+
+And the following is a minor variant of the first idiom that preserves the order of the original collection while removing duplicate elements:
+
+Collection<Type> noDups = new LinkedHashSet<Type>(c);
+
+The following is a generic method that encapsulates the preceding idiom, returning a Set of the same generic type as the one passed.
+
+public static <E> Set<E> removeDups(Collection<E> c) {
+    return new LinkedHashSet<E>(c);
+}
+
+**** exemplos de codigos 02
+The following program prints out all distinct words in its argument list. Two versions of this program are provided. The first uses
+JDK 8 aggregate operations. The second uses the for-each construct.
+
+Using JDK 8 Aggregate Operations: 
+
+
+import java.util.*;
+import java.util.stream.*;
+
+public class FindDups {
+    public static void main(String[] args) {
+        Set<String> distinctWords = Arrays.asList(args).stream()
+		.collect(Collectors.toSet()); 
+        System.out.println(distinctWords.size()+ 
+                           " distinct words: " + 
+                           distinctWords);
+    }
+}
+
+-------------------------------
+Using the for-each Construct: 
+
+
+import java.util.*;
+
+public class FindDups {
+    public static void main(String[] args) {
+        Set<String> s = new HashSet<String>();
+        for (String a : args)
+               s.add(a);
+               System.out.println(s.size() + " distinct words: " + s);
+    }
+}
+
+The following output is produced:
+
+
+4 distinct words: [left, came, saw, i]
+-------
+Note that the code always refers to the Collection by its interface type (Set) rather than by its implementation type. This is a strongly recommended programming practice because it gives you the flexibility to change implementations merely by changing the constructor. If either of the variables used to store a collection or the parameters used to pass it around are declared to be of the Collection's implementation type rather than its interface type, all such variables and parameters must be changed in order to change its implementation type.
+
+(AP: eu não entendi muito bem esse paragrafo, mas pode continuar no de baixo que dá pra entender a idéia). Furthermore, there's no guarantee that the resulting program will work. If the program uses any nonstandard operations present in the original implementation type but not in the new one, the program will fail. Referring to collections only by their interface prevents you from using any nonstandard operations.
+
+The implementation type of the Set in the preceding example is HashSet, which makes no guarantees as to the order of the elements in the Set. If you want the program to print the word list in alphabetical order, merely change the Set's implementation type from HashSet to TreeSet. Making this trivial one-line change causes the command line in the previous example to generate the following output.
+
+java FindDups i came i saw i left
+
+4 distinct words: [came, i, left, saw]
+
+**** Set Interface Bulk Operations
+
+Bulk operations are particularly well suited to Sets; when applied, they perform standard set-algebraic operations. Suppose s1 and s2 are sets. Here's what bulk operations do:
+
+    s1.containsAll(s2) — returns true if s2 is a subset of s1. (s2 is a subset of s1 if set s1 contains all of the elements in s2.)
+    s1.addAll(s2) — transforms s1 into the union of s1 and s2. (The union of two sets is the set containing all of the elements contained in either set.)
+    s1.retainAll(s2) — transforms s1 into the intersection of s1 and s2. (The intersection of two sets is the set containing only the elements common to both sets.)
+    s1.removeAll(s2) — transforms s1 into the (asymmetric) set difference of s1 and s2. (For example, the set difference of s1 minus s2 is the set containing all of the elements found in s1 but not in s2.)
+
+To calculate the union, intersection, or set difference of two sets nondestructively (without modifying either set), the caller must copy one set before calling the appropriate bulk operation. The following are the resulting idioms.
+
+Set<Type> union = new HashSet<Type>(s1);
+union.addAll(s2);
+
+Set<Type> intersection = new HashSet<Type>(s1);
+intersection.retainAll(s2);
+
+Set<Type> difference = new HashSet<Type>(s1);
+difference.removeAll(s2);
+
+The implementation type of the result Set in the preceding idioms is HashSet, which is, as already mentioned, the best all-around Set implementation in the Java platform. However, any general-purpose Set implementation could be substituted.
+*** Map
+a Map is not a true Collection.
+*** Sorted Collections
+
+****    SortedSet — a Set that maintains its elements in ascending order. Several additional operations are provided to take advantage of the ordering. Sorted sets are used for naturally ordered sets, such as word lists and membership rolls. Also see The SortedSet Interface section.
+****    SortedMap — a Map that maintains its mappings in ascending key order. This is the Map analog of SortedSet. Sorted maps are used for naturally ordered collections of key/value pairs, such as dictionaries and telephone directories. Also see The SortedMap Interface section.
+
+*** Iterators
+
+An Iterator is an object that enables you to traverse through a collection and to remove elements from the collection selectively, if desired. You get an Iterator for a collection by calling its iterator method. The following is the Iterator interface.
+
+public interface Iterator<E> {
+    boolean hasNext();
+    E next();
+    void remove(); //optional
+}
+
+The hasNext method returns true if the iteration has more elements, and the next method returns the next element in the iteration. The remove method removes the last element that was returned by next from the underlying Collection. The remove method may be called only once per call to next and throws an exception if this rule is violated.
+
+Note that Iterator.remove is the only safe way to modify a collection during iteration; the behavior is unspecified if the underlying collection is modified in any other way while the iteration is in progress.
+
+Use Iterator instead of the for-each construct when you need to:
+
+    Remove the current element. The for-each construct hides the iterator, so you cannot call remove. Therefore, the for-each construct is not usable for filtering.
+    Iterate over multiple collections in parallel.
+
+The following method shows you how to use an Iterator to filter an arbitrary Collection — that is, traverse the collection removing specific elements.
+
+static void filter(Collection<?> c) {
+    for (Iterator<?> it = c.iterator(); it.hasNext(); )
+        if (!cond(it.next()))
+            it.remove();
+}
+
+This simple piece of code is polymorphic, which means that it works for any Collection regardless of implementation. This example demonstrates how easy it is to write a polymorphic algorithm using the Java Collections Framework.
+
+*** Collections
+**** Agragate Operations
+
+The following code sequentially iterates through a collection of shapes and prints out the red objects: 
+
+
+myShapesCollection.stream()
+.filter(e -> e.getColor() == Color.RED)
+.forEach(e -> System.out.println(e.getName()));
+
+Likewise, you could easily request a parallel stream, which might make sense if the collection is large enough and your
+computer has enough cores: 
+
+
+myShapesCollection.parallelStream()
+.filter(e -> e.getColor() == Color.RED)
+.forEach(e -> System.out.println(e.getName()));
+---------------------
+For example, you might want to convert the elements of a
+Collection to String objects, then join them, separated by commas: 
+
+
+    String joined = elements.stream()
+    .map(Object::toString)
+    .collect(Collectors.joining(", "));
+
+Or perhaps sum the salaries of all employees: 
+
+
+int total = employees.stream()
+.collect(Collectors.summingInt(Employee::getSalary)));
+----------------------------------------------------------------------------------------------------
+AP: Em outra page:
+The addAll, removeAll, and retainAll methods all return true if the target Collection was modified in the process of executing the operation.
+
+As a simple example of the power of bulk operations, consider the following idiom to remove all instances of a specified element, e, from a Collection, c.
+
+c.removeAll(Collections.singleton(e));
+
+More specifically, suppose you want to remove all of the null elements from a Collection.
+
+c.removeAll(Collections.singleton(null));
+
+This idiom uses Collections.singleton, which is a static factory method that returns an immutable Set containing only the specified element. 
+
+**** to.Array
+For example, suppose that c is a Collection. The following snippet dumps the contents of c into a newly allocated array of Object
+whose length is identical to the number of elements in c.
+
+
+Object[] a = c.toArray();
+
+Suppose that c is known to contain only strings (perhaps because c is of type Collection<String>). The following snippet dumps
+the contents of c into a newly allocated array of String whose length is identical to the number of elements in c.
+
+
+String[] a = c.toArray(new String[0]);
+** for-each (o que é)
+*** for-each Construct
+
+The for-each construct allows you to concisely traverse a collection or array using a for loop  see The for Statement. The
+following code uses the for-each construct to print out each element of a collection on a separate line.
+
+for (Object o : collection)
+    System.out.println(o);
+
+
+
+
+
+* JavaFX
+** Aprendizados importantes
+*** De quando eu dou um setVisible(false) em um componente, mas ele não libera o espaço para outros ocuparem o seu lugar (acontece especialmente com os containers). Para resolver:
+(tirei de: https://stackoverflow.com/questions/12200195/javafx-hbox-hide-item    )
+Before calling legendPane.setVisible, call:
+
+legendPane.managedProperty().bind(legendPane.visibleProperty());
+
+The Node.managed property prevents a node in a Scene from affecting the layout of other scene nodes.
+
+
+* REFAZER O TESTE DE INGLÊS DA WORKANA:  Você poderá refazer esse teste a partir de 06 de Julho de 2021
+* sites de desafio de programação
+Codewars - desafiando-me
+https://www.codility.com/ (esse eu não achei onde cadastra/começa desafios, mas está indicado pelo geekhunters)
+https://codesignal.com/
+https://www.hackerrank.com/domains/java
+* jewelsea
+** a ideia do ChangeListener é ótima. Ela vem do Java 7 (posso achá-la no javafx.beans.value.ChangeListener (também tem no swing em javax.swing.event)
+      // keep the visual bounds display based upon the new bounds and keep it in sync.
+      boundsChangeListener = new ChangeListener<Bounds>() {
+        @Override public void changed(ObservableValue<? extends Bounds> observableValue, Bounds oldBounds, Bounds newBounds) {
+          updateBoundsDisplay(newBounds);  //esse nome do método: changed() eu posso dar o nome que eu quiser
+        }
+      };
+      bounds.addListener(boundsChangeListener);
+
+** fazendo o projeto do UML_Drawer eu fiquei em dúvida se toda vez que se muda um objeto (de lugar ou de tamanho) eu tenho que criar um new Scene, que carregará sempre denovo uma Lista de Group de todos os objetos já criados - ou seja: a cada pequena alteração é preciso criar TUDO denovo?? 
+
+R: O código do jewelsea expressa que não (ver arquivo: /media/saul/DRIVE_E/java/jewelsea/ProjetoComShapes/BoundsPlayground.java). Ver no código extraído daí a parte do final:     private void updateBoundsDisplay(Bounds newBounds) { .... }
+
+
+ver:
+https://stackoverflow.com/questions/22048114/drawing-transform-independent-layout-bounds-in-javafx
+
+
+
+// a translucent overlay display rectangle to show the bounds of a Shape.
+  class BoundsDisplay extends Rectangle {
+    // the shape to which the bounds display has been type.
+    final Shape monitoredShape;
+    private ChangeListener<Bounds> boundsChangeListener;
+
+    BoundsDisplay(final Shape shape) {
+      setFill(Color.LIGHTGRAY.deriveColor(1, 1, 1, 0.35));
+      setStroke(Color.LIGHTGRAY.deriveColor(1, 1, 1, 0.5));
+      setStrokeType(StrokeType.INSIDE);
+      setStrokeWidth(3);
+      
+      monitoredShape = shape;
+      
+      monitorBounds(BoundsType.LAYOUT_BOUNDS);
+    }
+
+    // set the type of the shape's bounds to monitor for the bounds display.
+    void monitorBounds(final BoundsType boundsType) {
+      // remove the shape's previous boundsType.
+      if (boundsChangeListener != null) {
+        final ReadOnlyObjectProperty<Bounds> oldBounds;
+        switch (selectedBoundsType.get()) {
+          case LAYOUT_BOUNDS:    oldBounds = monitoredShape.layoutBoundsProperty();   break;
+          case BOUNDS_IN_LOCAL:  oldBounds = monitoredShape.boundsInLocalProperty();  break;
+          case BOUNDS_IN_PARENT: oldBounds = monitoredShape.boundsInParentProperty(); break;
+          default: oldBounds = null;
+        }
+        if (oldBounds != null) {
+          oldBounds.removeListener(boundsChangeListener);
+        }
+      }
+
+      // determine the shape's bounds for the given boundsType.
+      final ReadOnlyObjectProperty<Bounds> bounds;
+      switch (boundsType) {
+        case LAYOUT_BOUNDS:    bounds = monitoredShape.layoutBoundsProperty();   break;  
+        case BOUNDS_IN_LOCAL:  bounds = monitoredShape.boundsInLocalProperty();  break;  
+        case BOUNDS_IN_PARENT: bounds = monitoredShape.boundsInParentProperty(); break;
+        default: bounds = null;
+      }
+
+      // set the visual bounds display based upon the new bounds and keep it in sync.
+      updateBoundsDisplay(bounds.get());
+
+      // keep the visual bounds display based upon the new bounds and keep it in sync.
+      boundsChangeListener = new ChangeListener<Bounds>() {
+        @Override public void changed(ObservableValue<? extends Bounds> observableValue, Bounds oldBounds, Bounds newBounds) {
+          updateBoundsDisplay(newBounds);
+        }
+      };
+      bounds.addListener(boundsChangeListener);
+    }
+
+    // update this bounds display to match a new set of bounds.
+    private void updateBoundsDisplay(Bounds newBounds) {
+      setX(newBounds.getMinX());
+      setY(newBounds.getMinY());
+      setWidth(newBounds.getWidth());
+      setHeight(newBounds.getHeight());
+    }
+  }  
+** as variaveis "a" e "b" de "pair" são private, mas mesmo assim dá de fazer um instanceof. Observar também que no if foi usado uma estrutura mais lógiva (as 2 sentenças do pair se assemelham, o que torna mais legível deixá-las juntas, também mais claro se deixá-las dentro de um "(" ... ")"" delimitador a mais. As seguintes pode ficar uma em cada linha. Ainda na if, fica mais claro usar o "{" mesmo que tenha apenas uma linha de execução. Reparar que na senença dos 2 último if's não foi usado "(...)"
+    // for each shape test it's intersection with all other shapes.
+    for (Shape src : shapes) {
+      for (Shape dest : shapes) {
+        ShapePair pair = new ShapePair(src, dest);
+        if ((!(pair.a instanceof Anchor) && !(pair.b instanceof Anchor))
+            && !intersections.contains(pair)
+            && pair.intersects(selectedBoundsType.get())) {
+          intersections.add(pair);
+        }
+      }
+    }
+  }
+
+	
+** usar o maior número possível de variáveis final. Não economizar nessas atribuições final, e depois se não for possível rodar algumas, daí ir tirando essa atribuição.
+		
+* identação do código para deixá-lo mais apresentável e legível
+** código do jewelsea
+Como mostrado no exemplo abaixo, basta dar 2 espaços entre cada nível de identação:
+
+#+BEGIN_SRC java
+    // set the type of the shape's bounds to monitor for the bounds display.
+    void monitorBounds(final BoundsType boundsType) {
+      // remove the shape's previous boundsType.
+      if (boundsChangeListener != null) {
+        final ReadOnlyObjectProperty<Bounds> oldBounds;
+        switch (selectedBoundsType.get()) {
+          case LAYOUT_BOUNDS:    oldBounds = monitoredShape.layoutBoundsProperty();   break;
+          case BOUNDS_IN_LOCAL:  oldBounds = monitoredShape.boundsInLocalProperty();  break;
+          case BOUNDS_IN_PARENT: oldBounds = monitoredShape.boundsInParentProperty(); break;
+          default: oldBounds = null;
+        }
+        if (oldBounds != null) {
+          oldBounds.removeListener(boundsChangeListener);
+        }
+      }
+#+END_SRC
+* dúvidas de porque foi feito como foi feito
+** códigos jewelsea
+*** porque não se usou Double simples ao invés de DoubleProperty??
+#+BEGIN_SRC java
+    // an anchor displayed around a point.
+  class Anchor extends Circle { 
+    Anchor(String id, DoubleProperty x, DoubleProperty y) {
+      super(x.get(), y.get(), 10);
+      setId(id);
+      setFill(Color.GOLD.deriveColor(1, 1, 1, 0.5));
+      setStroke(Color.GOLD);
+      setStrokeWidth(2);
+      setStrokeType(StrokeType.OUTSIDE);
+  
+      x.bind(centerXProperty());
+      y.bind(centerYProperty());
+    }
+  }  
+#+END_SRC 
+
+AP: parece que a principal vantagem é:
+Note: setting or binding this property to a null value will set the property to "0.0". 
+
+AP: mas tem os lances dos "bind"; se for possível linkar um valor de uma propriedade (ex: endX de uma posição de linha) com uma outra variável genérica, não seria preciso ficar reatribuindo toda hora o valor sempre que esse aumentasse.
+
+
+
+* Convenções
+** nomes de métodos
+Dada a seguinte classe como exemplo:
+class Bill {
+    // Define a variable to store the property
+	private DoubleProperty amountDue = new SimpleDoubleProperty();
+ 
+    // Define a getter for the property's value
+    public final double getAmountDue(){return amountDue.get();}
+ 
+    // Define a setter for the property's value
+    public final void setAmountDue(double value){amountDue.set(value);}
+ 
+     // Define a getter for the property itself
+    public DoubleProperty amountDueProperty() {return amountDue;}
+ 
+}
+
+*** getter and setters: getAmountDue(), setAmountDue(double)
+*** get do objeto:  (É esse que é novidade pra mim!:)
+Finally, the amountDueProperty() method defines the property getter. This is a new convention in which the method name contains the name of the property (amountDue, in this case), followed by the word "Property." The return type is the same as the property itself (DoubleProperty, in this example).
+*** esse exemplo se aplica a toda a biblioteca do Java(?)/JavaFX(?) - pergunto pois no material da Oracle está escrito (https://docs.oracle.com/javafx/2/binding/jfxpub-binding.htm):
+When building GUI applications with JavaFX, you will notice that certain classes in the API already implement properties. For example, the javafx.scene.shape.Rectangle class contains properties for arcHeight, arcWidth, height, width, x, and y. For each of these properties there will be corresponding methods that match the conventions previously described. For example, getArcHeight(), setArcHeight(double), arcHeightProperty(), which together indicate (to both developers and tools) that the given property exists.
+
+AP: o que responde a pergunta: algumas propriedades/objetos implementam essa nomenclatura: set, get, property
+
+* JavaFX
+
+ver: https://currere.co/knowledge/javafx-vs-swing-vs-web
+
+** AP: Pode ser atribuído a todos os componentes o método addListener, e ser lido de cada uma o valor de alterações (ObservableValue<? extends Boolean> observableValue, Boolean oldValue, Boolean doTranslate):
+#+BEGIN_SRC java
+  // add the ability to set a translate value for the circles.
+    final CheckBox translateNodes = new CheckBox("Translate circles");
+    translateNodes.selectedProperty().addListener(new ChangeListener<Boolean>() {
+      @Override public void changed(ObservableValue<? extends Boolean> observableValue, Boolean oldValue, Boolean doTranslate) {
+        if (doTranslate) {
+          for (Shape shape : transformableShapes) {
+            shape.setTranslateY(100);
+            testIntersections();
+          }
+        } else {
+          for (Shape shape : transformableShapes) {
+            shape.setTranslateY(0);
+            testIntersections();
+          }
+        }
+      }
+    });
+#+END_SRC
+** fechar a janela do stage de uma janela auxíliar quando a outra janela principal for fechada
+#+BEGIN_SRC java
+    // ensure the utility window closes when the main app window closes.
+    stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+      @Override public void handle(WindowEvent windowEvent) {
+        reportingStage.close();
+      }
+    });
+#+END_SRC
+
+* JDK_7
+https://loiane.com/2011/07/novidades-java-7-project-coin/
+https://github.com/loiane/Java7HelloWorld
+
+* JDK_8
+*** novidades trazidas
+melhor site: https://www.journaldev.com/2389/java-8-features-with-examples
+* JDK_9
+*** novidades trazidas
+melhor site: https://www.journaldev.com/13106/java-9-modules
+https://www.pluralsight.com/blog/software-development/java-9-new-features
+	
+*** workshop (repeteco da do JDK_10)
+https://github.com/loiane/java_9_10_workshop
+
+* JDK_10
+*** novidades trazidas
+melhor site: https://www.journaldev.com/20395/java-10-features
+	
+*** workshop (repeteco da do JDK_9)
+https://github.com/loiane/java_9_10_workshop
+  
+
+
+* Java 11:
+https://www.devmedia.com.br/as-boas-partes-do-java-11/40193
+https://www.zup.com.br/blog/java-11-principais-novidades
+
+* Java 16 API Documentation
+ler só o que é dito no index.html geral facilmente pode deixar passar o que o pacote/classe/recurso/tool faz... tem que abrir o link e ler com mais detalhes
+** JDK Tool Specifications - Java® Development Kit Version 16 Tool Specifications
+ver todos aqui (só vi poucos por enquanto... se entende mais de cada uma ao abrir os links individualmente:  https://docs.oracle.com/en/java/javase/16/docs/specs/man/index.html
+
+*** jpackage
+	Cria arquivo executável de cada sistema operacional
+*** jshell
+interactively evaluate declarations, statements, and expressions of the Java programming language in a read-eval-print loop (REPL)
+* Java 16
+https://wiki.eclipse.org/Java16/Examples
+* Java 8
+** curso da Oracle
+https://docs.oracle.com/javase/tutorial/index.html
+*** Java SE 8 Programmer I Exam
+https://docs.oracle.com/javase/tutorial/extra/certification/javase-8-programmer1.html
+
+
+**** Variables
+ Do fields have to be initialized when they are declared? Are fields assigned a default value if they are not explicitly initialized? 
+ 
+In the Java programming language, the terms "field" and "variable" are both used; this is a common source of confusion among new developers, since both often seem to refer to the same thing.
+
+The Java programming language defines the following kinds of variables:
+
+***** Instance Variables (Non-Static Fields) 
+	Technically speaking, objects store their individual states in "non-static fields", that is, fields declared without the static keyword. Non-static fields are also known as instance variables because their values are unique to each instance of a class (to each object, in other words); the currentSpeed of one bicycle is independent from the currentSpeed of another.
+
+***** Class Variables (Static Fields)
+	A class variable is any field declared with the static modifier; this tells the compiler that there is exactly one copy of this variable in existence, regardless of how many times the class has been instantiated. A field defining the number of gears for a particular kind of bicycle could be marked as static since conceptually the same number of gears will apply to all instances. The code static int numGears = 6; would create such a static field. Additionally, the keyword final could be added to indicate that the number of gears will never change.
+
+***** Local Variables
+	Similar to how an object stores its state in fields, a method will often store its temporary state in local variables. The syntax for declaring a local variable is similar to declaring a field (for example, int count = 0;). There is no special keyword designating a variable as local; that determination comes entirely from the location in which the variable is declared — which is between the opening and closing braces of a method. As such, local variables are only visible to the methods in which they are declared; they are not accessible from the rest of the class.
+
+***** Parameters 
+	You've already seen examples of parameters, both in the Bicycle class and in the main method of the "Hello World!" application. Recall that the signature for the main method is public static void main(String[] args). Here, the args variable is the parameter to this method. The important thing to remember is that parameters are always classified as "variables" not "fields". This applies to other parameter-accepting constructs as well (such as constructors and exception handlers) that you'll learn about later in the tutorial.
+***** ...
+	Having said that, the remainder of this tutorial uses the following general guidelines when discussing fields and variables. If we are talking about "fields in general" (excluding local variables and parameters), we may simply say "fields". If the discussion applies to "all of the above", we may simply say "variables". If the context calls for a distinction, we will use specific terms (static field, local variables, etc.) as appropriate. You may also occasionally see the term "member" used as well. A type's fields, methods, and nested types are collectively called its members.
+
+***** Naming
+
+	Every programming language has its own set of rules and conventions for the kinds of names that you're allowed to use, and the Java programming language is no different. The rules and conventions for naming your variables can be summarized as follows:
+
+    	Variable names are case-sensitive. A variable's name can be any legal identifier — an unlimited-length sequence of Unicode letters and digits, beginning with a letter, the dollar sign "$", or the underscore character _ . The convention, however, is to always begin your variable names with a letter, not "$" or "_". Additionally, the dollar sign character, by convention, is never used at all. You may find some situations where auto-generated names will contain the dollar sign, but your variable names should always avoid using it. A similar convention exists for the underscore character; while it's technically legal to begin your variable's name with _, this practice is discouraged. White space is not permitted.
+
+	Subsequent characters may be letters, digits, dollar signs, or underscore characters. Conventions (and common sense) apply to this rule as well. When choosing a name for your variables, use full words instead of cryptic abbreviations. Doing so will make your code easier to read and understand. In many cases it will also make your code self-documenting; fields named cadence, speed, and gear, for example, are much more intuitive than abbreviated versions, such as s, c, and g. Also keep in mind that the name you choose must not be a keyword or reserved word. (AP: ISSO MUDOU NAS OUTRAS VERS DO JAVA?)
+
+	If the name you choose consists of only one word, spell that word in all lowercase letters. If it consists of more than one word, capitalize the first letter of each subsequent word. The names gearRatio and currentGear are prime examples of this convention. If your variable stores a constant value, such as static final int NUM_GEARS = 6, the convention changes slightly, capitalizing every letter and separating subsequent words with the underscore character. By convention, the underscore character is never used elsewhere.
+
+**** The main Method
+public static void main(String[] args)
+
+The modifiers public and static can be written in either order (public static or static public), but the convention is to use public static as shown above. You can name the argument anything you want, but most programmers choose "args" or "argv".
+
+**** Lesson: Common Problems (and Their Solutions)
+***** Compiler Problems
+
+****** Common Error Messages on Microsoft Windows Systems: 'javac' is not recognized as an internal or external command, operable program or batch file
+If you receive this error, Windows cannot find the compiler (javac).
+
+Here's one way to tell Windows where to find javac. Suppose you installed the JDK in C:\jdk1.8.0. At the prompt you would type the following command and press Enter:
+
+C:\jdk1.8.0\bin\javac HelloWorldApp.java
+
+If you choose this option, you'll have to precede your javac and java commands with C:\jdk1.8.0\bin\ each time you compile or run a program. To avoid this extra typing, consult the section Updating the PATH variable in the JDK 8 installation instructions.
+	
+******* Updating the PATH Environment Variable
+
+If you do not set the PATH variable, you need to specify the full path to the executable file every time you run it, such as:
+
+C:\> "C:\Program Files\Java\jdk1.8.0\bin\javac" MyClass.java
+
+It is useful to set the PATH variable permanently so it will persist after rebooting.
+
+To set the PATH variable permanently, add the full path of the jdk1.8.0\bin directory to the PATH variable. Typically, this full path looks something like C:\Program Files\Java\jdk1.8.0\bin. Set the PATH variable as follows on Microsoft Windows:
+
+    Click Start, then Control Panel, then System.
+
+    Click Advanced, then Environment Variables.
+
+    Add the location of the bin folder of the JDK installation to the PATH variable in System Variables. The following is a typical value for the PATH variable:
+
+    C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.8.0\bin
+
+Note:
+
+    The PATH environment variable is a series of directories separated by semicolons (;) and is not case-sensitive. Microsoft Windows looks for programs in the PATH directories in order, from left to right.
+
+    You should only have one bin directory for a JDK in the path at a time. Those following the first instance are ignored.
+
+    If you are not sure where to add the JDK path, append it.
+
+    The new path takes effect in each new command window you open after setting the PATH variable.
+
+****** Common Error Messages on UNIX Systems: javac: Command not found
+If you receive this error, UNIX cannot find the compiler, javac.
+
+Here's one way to tell UNIX where to find javac. Suppose you installed the JDK in /usr/local/jdk1.8.0. At the prompt you would type the following command and press Return:
+
+/usr/local/jdk1.8.0/javac HelloWorldApp.java
+
+Note: If you choose this option, each time you compile or run a program, you'll have to precede your javac and java commands with /usr/local/jdk1.8.0/. To avoid this extra typing, you could add this information to your PATH variable. The steps for doing so will vary depending on which shell you are currently running.
+****** Class names, 'HelloWorldApp', are only accepted if annotation processing is explicitly requested
+If you receive this error, you forgot to include the .java suffix when compiling the program. Remember, the command is javac HelloWorldApp.java not javac HelloWorldApp
+
+
+
+* JDK_11
+*** novidades trazidas
+https://www.journaldev.com/24601/java-11-features
+* JDK_12
+*** novidades trazidas
+melhor site: https://www.journaldev.com/28666/java-12-features
+ver tb: https://currere.co/knowledge/java12-new-language-features
+com as novas funcionalidades trazidas com a versão 12
+
+
+https://loiane.com/2019/03/what-is-new-in-java-12-api-for-developers/
+https://github.com/loiane/java12-examples
+
+https://www.youtube.com/watch?v=xgJyQVeJltA
+
+* JDK_13
+
+*** novidades trazidas
+melhor site: https://www.journaldev.com/33204/java-13-features
+https://github.com/loiane/java13-examples
+
+* JDK_14
+*** novidades trazidas
+melhor site: https://www.journaldev.com/37273/java-14-features
+https://github.com/loiane/java14-examples
+
+* JDK_15_e_16
+*** novidades trazidas
+https://github.com/loiane/java-15_16-examples
+
+
+melhor site: https://www.journaldev.com/44681/java-15-features
+** generics
+AP: Para definir que será usado um generics existem 2 modos:
+*** modo 1
+#+BEGIN_SRC java
+class Printer
+{
+	public <T> void  printArray(T a[]) {   /// O <T> vem antes do void. Depois dentro da definição dos argumentos aparece sem os "< >"
+		for(T b:a) {
+			System.out.println(b);
+		}
+	}
+ 
+}
+#+END_SRC
+
+*** modo 2
+#+BEGIN_SRC java
+class Printer<T>                      /// Ou o <T> vem do lado do nome da classe. Nesse caso não precisa vir ali no método
+{ 
+	public void  printArray(T a[]) {      // O "T" que aparece aqui deve estar fora dos "< >"
+		for(T b:a) {
+			System.out.println(b);
+		}
+	}
+ 
+}
+#+END_SRC
+
+* Microservices
+https://currere.co/taxonomy?name=category&val=Microservices
+* LSP-DAP
+** videos
+*** video: https://www.youtube.com/watch?v=0bilcQVSlbM (Emacs IDE - How to Debug Your Code with dap-mode)
+**** em 22:18min(voltar um pouco antes desse tempo): ativar primeiro o dap-breakpoint-toogle, depois para a mesma linha ativar: dap-breakpoint-log-message: 
+exemplo:"minha msg {i}" //onde i é o nome de uma variável
+dá de deixar umas linhas (em branco?)  pra ir debugando com dap-next e ir programando o que é para ser apresentado no log do  dap-breakpoint-log-message..... não perde tempo re-executando sempre
+**** essas 2 pode ser que não sejam suportadas pelo java - confirmar:
+***** em 23:50min: dap-breakpoint-condition  ... colocar por exemplo pra rodar o breakpoint quando "i === 5" (esses 3 = não servem para o java... descobrir o que serve)
+***** dap-breakpoint-hit-condition para para debugar depois de ter passado n vezes por essa linha de código (ex: dentro de um loop)
+**** usar o dap-hydra pra ter um painelzinho de atalhos de teclado para facilitar o debug
+**** usar dap-ui-expressions-add  e digitar uma expressão que se quer que apareça no "Locals" (o cara do video adicionou um objeto e apareceu aquela listview do objeto)
+**** dap-ui-repl abre o terminal para escolher qual variável quer se ver. Quando o valor que eu quero é de um tipo simples (ex: int) basta digitar o nome da var, mas quando é uma expressão (it.next()) eu ainda não consegui fazer. Com esse terminal ainda é possível mudar o valor das variáveis do app que está rodando em runtime (!!!)
+**** dap-tooltip-mode por padrão é habilitado. Dá de passar o mouse sobre a variável e é aberta uma janelinha com os dados da variável. (muito útil tb!!!)
+**** caso não se queira a janela de debug com todas aquelas janelas, colocar no .emacs:
+(use-package dap-mode
+  :custom
+  	(lsp-enable-dap-auto-configure nil)
+  :config
+	(dap-ui-mode 1))  ;;will have minimal debug experince
+
+então caso se queira ver uma das janelas pode-se executar manualmente para ela aparecer:
+	dap-ui-locals	 
+	dap-ui-breakpoints
+	dap-ui-....
+*** LSP: https://www.youtube.com/watch?v=E-NAM9U5JYE&t=2s (Emacs From Scratch #8 - Build Your Own IDE with lsp-mode)
+continuar em 23min, mas antes instalar o which-key e cofigurar para ele aceitar o lsp-dap
+**** lsp-find-references: encontra todas as ocorrências de texto que possuem a string selecionada no texto editado no momento
+**** o lsp tem um comando de rename que não muda só no arquivo local, mas sim em qualquer arquivo do projeto (lsp-rename)
+**** lsp-ui-doc-show  mostra o doc da função ou variável em que o cursor está em cima
+**** lsp-ui-peek-find-references mostra tudo o que aparece que é igual o que está sob o cursor dentro do projeto/(workspace(?)) - usar M-n e M-p para navegar na lista
+**** lsp-treemacs-symbols  mostra aquela janela de objetos/funções semelhante ao Eclipse
+**** lsp-ivy-workspace-symbol  mostra todas as ocorrências de uma palavra no workspace dando a classificação do tipo em cada
+* CodeWar
+
+** Kata
+
+ Kata are short coding exercises that are designed to test your abilities. Through this process of solving kata you will learn a great deal. 
+
+** Ranks (kyū)
+
+We use a "kyū" system to help indicate which level you have trained to, as well as to indicate which level a kata (code challenge) belongs to. Starting at 8 kyū, you will advance all the way to 1 kyū. This system is borrowed from Japanese martial arts and the game of Go, where the levels count the number of degrees you are away from being a "Master". Once you reach master level, you leave the kyū system and enter the dan system, where each level of dan reflects how many levels of master you are.
+
+On the site, both users and kata have ranks. The harder the rank of a kata you complete, the faster you will earn a higher rank. Completing a kata of a given rank will not immediately make you that rank, you must complete a number of kata at or above that rank to prove you can consistently complete challenges at that level.
+
+** Honor
+
+Honor is what we call the points that you earn when doing activities on the site. You earn honor for most activities, like solving kata, commenting and creating content. Honor is the number next to your profile and rank. We won't get too deep into honor right now but an important thing to remember is that honor and ranks are treated differently. Honor reflects your experience on the site, contributions, etc. Rank more closely reflects the level of challenges that you are capable of completing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Eclipse
+** Git
+*** Criar repositório e adicionar ele ao Eclipse
+Entra na perspective Git, abre a guia da esquerda na lista de repositórios, e escolhe nela: "Create a new repository and add to this view". No "Repository directory" escolhe a pasta que vai ser salva no repositório.
+*** Commitar 
+Entra na perspective Git, abre a guia da esquerda na lista de repositórios. Clica no repositório que se quer commitar com o botão direito do mouse e escolhe "Commit".
+*** PERGUNTAS PESSOAIS ( ???  )
+**** qual a diferença entre "Commit" e "Commit and push"??
+Commitar 
+Entra na perspective Git, abre a guia da esquerda na lista de repositórios. Clica no repositório que se quer commitar com o botão direito do mouse e escolhe "Commit" (ou commit and push??)
+* Biblioteca aprendida
+** BigInteger:
+        BigInteger ret = BigInteger.ONE;
+      BigInteger sum =BigInteger.valueOf(0);
+		BigInteger c = b.add(a);
+	    BigInteger b = new BigInteger(String.valueOf(t.multiply(t)));
+(ver desafio resolvido: /media/lucas/DRIVE_E/java/workspaces-eclipse/2021/Challenges/src/codewar_Rank7/Easyline.java)
+https://www.codewars.com/kata/56e7d40129035aed6c000632/solutions/java
+
+* códigos que eu achei interessante:
+** code 1 - throw new AssertionError("How did we get here?");
+          } else {
+                    updating = true;
+                    try {
+                        if (observable == stringProperty) {
+                            updateDoubleProperty(doubleProperty, (String) newValue);
+                        } else if (observable == doubleProperty) {
+                            updateStringProperty(stringProperty, (Number) newValue);
+                        } else {
+                            throw new AssertionError("How did we get here?");
+                        }
+                    } finally {
+                        updating = false;
+                    }
+
+* GitHub Paradigma0621
+** comentar no Leraning.java do dia 14/06/2021 - DoubleProperty
+	O DoubleProperty só tem sentido de ser quando ligado ao ChangeListener.
+* Como posso melhorar esses códigos??
+** TimeFlow
+//mode.ComputeMultipleLevelsRegistry.java:
+// Pq melhorar? Eu faço uma preliminar dos cálculos do level, depois faço um while que faz  a mesma coisa... tem como fazer um while que faz tudo de uma vez??
+
+		if (myParagraph.getTreeItemImp().hasChildren()) {
+			System.out.println("tem children - h0");
+
+			int totalItemsSize = data.getDocParagraphs().size();
+			int nextItemIndex = itemIndex + 1;
+
+			Paragraph subParagraph = data.getDocParagraphs().get(nextItemIndex);
+			int numSubLevel = subParagraph.getLevel();
+			childrenWorker.passChidren(subParagraph);
+
+			while (((mainItemLevel < numSubLevel) || (numSubLevel == 0)) && (nextItemIndex < totalItemsSize - 1)) {
+				nextItemIndex++;
+				subParagraph = data.getDocParagraphs().get(nextItemIndex);
+				numSubLevel = subParagraph.getLevel();
+				childrenWorker.passChidren(subParagraph);
+			}
+
+			// childrenWorker.showChidrens();
+
+		}
+* cronograma de estudos (seções de 15 mins) (desde 16/07/2021)
+** 1) Orientação à objetos (5)
+** 2) Inglês (5)
+** 3) TDD (5)
+** 4) Banco de dados (4)
+como posso resolver os exercícios do questionário do GeekHunters?
+** 5) BDD (3)
+** 6) Programação funcional (3)
+** 7) Eclipse (3)
+** 8) Spring Boot (2)
+** 9) Questionário Java
+
+SEG
+2, 4
+
+TER
+2, 5
+
+QUA
+2, 6
+
+QUI
+2, 7
+
+SEX
+2, 8
+
+SAB
+2, 9
+
+
+** 10) Programação em Android
+** 11) Utilizar celular/tablet Android
+
+* Aprendizados para ter mais traquejo nas leituras/estudos
+** Dica do Marcos para leitura de livros de Java em 12/07/2020:
+Quando já tiver progredido um pouco no livro: avança lendo rapidamente mais umas 20 páginas, pra ter uma ideia geral do que vai ser dito.
+** Usar e abusar do recurso de fazer determinado aprendizado ou meta a luz do momento
+** Comecei um capítulo: primeira coisa: surfar no capítulo para ver sobre o que ele vai falar.
+** Desde 21/07/2021 tenho aprendido a programar primeiro tentando codar algo sem consultar nenhum material. Ex: Eu peguei uma String no Eclipse e tentei aprender todos os métodos dela codando direto. O mesmo para arrays e OOP. A prática mostrou-se eficaz desde o começo.
+
+* conceitos
+** Method x Function
+*** Question
+Can someone provide a simple explanation of methods vs. functions in OOP context?
+
+*** Answer
+A method is on an object or is static in class.
+A function is independent of any object (and outside of any class).
+For Java and C#, there are only methods.
+
+** Argumento x Parâmetro (são duas coisas diferentes)
+Primeiro exemplifico, na sequência vem a explanação:
+
+void Func1(int i, bool flag = true) { //declarou dois parâmetros
+    // execução
+}
+
+void Func2(params int[] lista) { //declarou um parâmetro
+    //execução
+}
+
+void Func3(bool x, bool y) {
+    int z = 0;
+    Func1(1); //chamou com 1 argumento
+    Func1(z, x && y); //chamou com dois argumentos vindos de variável e expressão respectivamente
+    Func2(1, 2, 3); //chamou com 3 argumentos
+    Func1(flag : false, i : 2); //argumentos nomeados
+}
+
+Parâmetro é a variável que irá receber um valor em uma função (ou método) enquanto que um argumento é o valor (que pode originar de uma variável ou expressão) que você passa para a função (ou método).
+
+Você não passa parâmetros, você passa argumentos. Você recebe argumentos também, mas recebe em parâmetros. Você parametriza sua função com informações que virão posteriormente. Você argumenta com o que deseja executar uma função devidamente parametrizada.
+
+Pode haver menos ou mais argumentos para cada parâmetro já que existem parâmetros que são opcionais e outros que podem ser listas variáveis de dados. Portanto não há uma relação de um para um e a distinção entre eles é importante.
+
+Frequentemente é confundido por todos e eu mesmo admito que intercambio os termos erroneamente, mas para uma boa comunicação é importante todos saberem o correto.
+
+** assinatura de um método
+int somaValores(int v1, int v2)
+Ao que damos o nome de "Identidade do Método" (ou "Assinatura do Método") é a parte:
+ somaValores(int v1, int v2)
+Não podemos ter 2 métodos com a mesma identidade (mesmo que retornem tipos de dados diferentes).
+
+** Spring
+
+O Spring é um framework open source para a plataforma Java. Trata-se de um framework não intrusivo, baseado nos padrões de projeto inversão de controle e injeção de dependência.
+
+
+Spring é um conjunto de projetos que ajudam nós, desenvolvedores, a criar aplicações Java com simplicidade e flexibilidade.
+
+*** Spring versus Java EE
+
+O Spring não chega a ser 100% concorrente do Java EE, até mesmo porque, com Spring, você também usa tecnologias que estão dentro do Java EE.
+
+Mas há quem prefira trabalhar mais com os projetos do Spring (e claro, vai usar Java EE também)...
+
+...e há quem prefira trabalhar apenas com as especificações do Java EE, sem Spring.
+
+Minha sugestão: saia fora dessa guerrinha. Aprenda os dois!
+
+Essa é a postura de um profissional que entende que cada tecnologia tem seus benefícios diferentes.
+
+Como Spring é independente de especificação, a vantagem é que novos projetos são lançados e evoluem muito rápido.
+
+De fato, geralmente o Java EE está atrás do Spring em se tratando de evoluções na plataforma.
+
+Ao mesmo tempo, Java EE tem uma grande especificação por trás, e isso trás uma certa segurança para os desenvolvedores, a custo de uma burocracia e um pouco de demora.
+
+O que eu quero dizer é: você pode até gostar mais de uma plataforma do que da outra, mas é importante conhecer as duas.
+
+
+** Spring Boot
+
+O Spring Boot é um framework Java open source que tem como objetivo facilitar esse processo em aplicações Java. Consequentemente, ele traz mais agilidade para o processo de desenvolvimento, uma vez que devs conseguem reduzir o tempo gasto com as configurações iniciais.
+
+--------
+Spring Boot is a framework that allows to easily create Spring-powered, production-grade applications and services with the absolute minimum fuss. It takes an opinionated view of the Spring platform designed to work for new and experienced users of Spring.
+
+Spring Boot makes it very easy to create a Spring-powered application with a minimum amount of work. An application created with Spring Boot can be:
+
+    Created without a single line of xml configuration,
+    Created without any requirement of an application server because Spring Boot provides an application server (Embed tomcat, jetty or undertow).
+    Largely autoconfigured with some sensible defaults and opinionated starter POMs to simplify your maven configuration,
+    Provide production-ready features such as metrics, health checks, and externalized configuration.
+
+Spring Boot consists of several (optional) modules
+
+** Spring MVC
+
+O Spring MVC é um framework que ajuda no desenvolvimento de aplicações web. Com ele nós conseguimos construir aplicações web robustas e flexíveis. 
+--------
+A framework for building Java web applications based on the Model-View-Controller (MVC) pattern. It promotes flexible and decoupled code from the underlying view technologies.
+
+Spring MVC is an action-based (as opposed to component-based) web framework built on top of the Spring IOC Container. MVC stands for Model View Controller, a long standing design pattern that layers an application separating presentation concerns from business logic see Portland Pattern Repository's MVC Entry
+
+The latest stable version is 5.1.4 and was released in January 2019, and the current docs can be found in the MVC section of the Spring Reference.
+
+Spring Version 5.0 fully supports Java 9 features, this release now requires Java SE 8.
+
+** Spring MVC
+
+	O Spring MVC é um dos projetos do Spring, que consiste em uma solução action-based para desenvolvimento web usando o padrão MVC.
+
+    Spring MVC é uma estrutura MVC completa orientada a HTTP, gerenciada pela Spring Framework e baseada em Servlets. Seria equivalente ao JSF na pilha JavaEE. Os elementos mais populares nele são as classes anotadas @Controller, nas quais você implementa métodos que podem ser acessados ​​usando diferentes solicitações HTTP. Tem um equivalente @RestController para implementar APIs baseadas em REST.
+
+    O Spring boot é um utilitário para configurar aplicativos rapidamente, oferecendo uma configuração pronta para criar aplicativos com o Spring. Como você deve saber, Primavera integra uma vasta gama de  diferentes módulos sob seu guarda-chuva , como primavera-core , primavera-dados , primavera-web (que inclui Spring MVC, por sinal) e assim por diante. Com esta ferramenta, você pode dizer ao Spring quantos deles usará e obterá uma configuração rápida para eles (você poderá alterá-lo sozinho posteriormente).
+
+Portanto, o Spring MVC é uma estrutura a ser usada em aplicativos da Web e o Spring Boot é um inicializador de projeto pronto para produção baseado em Spring .
+
+
+** Spring Data
+https://blog.algaworks.com/spring-data-jpa/
+** JPA
+Java Persistence API é uma API padrão da linguagem Java que descreve uma interface comum para frameworks de persistência de dados. A JPA define um meio de mapeamento objeto-relacional para objetos Java simples e comuns, denominados beans de entidade.
+
+
+** boiler plate
+Código boilerplate ou boilerplate se refere a seções de código que devem ser incluídas em muitos lugares com pouca ou nenhuma alteração. Ele é muitas vezes usado quando se refere a linguagens que são consideradas detalhadas, onde o programador deve escrever muito código para fazer tarefas mínimas. 
+** inversão de controle
+Inversão de Controle ou Inversion of Control - conhecido pela Sigla IoC é um Pattern que prega para usarmos o controle das instancias de uma determinada classe ser tratada externamente e não dentro da classe em questão, ou seja, Inverter o controle de uma classe delegando para uma outra classe, interface, componente,
+** JSF
+O JavaServer Faces (JSF) é um framework de interface de usuário (IU) para aplicações Java Web. Foi projetado para facilitar significativamente a trabalhosa tarefa de escrever e manter os aplicações que são executadas em um servidor de aplicações Java e renderizar as IUs de volta a um cliente de destino.
+** JSP
+JavaServer Pages (JSP) é uma tecnologia que ajuda os desenvolvedores de software a criarem páginas web geradas dinamicamente baseadas em HTML, XML ou outros tipos de documentos. Lançada em 1999 pela Sun Microsystems, JSP é similar ao PHP, mas usa a linguagem de programação Java.
+
+Para implantar e executar JavaServer Pages, um servidor web compatível com um container servlet, como Apache Tomcat, Jetty ou Glassfish, é requerido. 
+** Servlet
+Servlet (servidorzinho em tradução livre) é uma classe Java usada para estender as funcionalidades de um servidor. Apesar dos servlets poderem responder a quaisquer tipos de requisições, eles normalmente são usados para estender as aplicações hospedadas por servidores web, desta forma eles podem ser imaginados como Applets Java que rodam em servidores em vez de rodarem nos navegadores web. Estes tipos de servlets são os equivalentes Java a outras tecnologias de conteúdo Web dinâmico, como PHP e ASP.NET. 
+** injeção de dependência é um tipo de inversão de controle
+Injeção de dependência não usa a palavra chave "new".
+
+Pode ser feito através da propriedade declarada como @Autowired 
+Pode ser feito através do construtor declarado como @Autowired 
+Pode ser feito através de um método declarado como @Autowired  (o método padrão é o setter)
+
+** paradigma funcional
+
+*** código em paradigma imperativo (o java começou assim)
+public class Imperativo {
+    public static void main(String[] args) {
+        int valor = 10;
+        int resultado = valor * 3;
+        System.out.println("O resutado é :: "+resultado);
+    }
+}
+
+*** código em paradigma funcional (o java suporta hoje)
+public class Funcional {
+    public static void main(String[] args) {
+        UnaryOperator<Integer> calcularValorVezes3 = valor -> valor*3;
+        int valor = 10;
+        System.out.println("O resutado é :: "+calcularValorVezes3.apply(10));
+    }
+}
+** tipos de variáveis
+	O Java possui dois tipos de dados que são divididos em por valor (tipos primitivos) e por referência (tipos por referência). 
+	Os tipos primitivos são boolean, byte, char, short, int, long, float e double. Os tipos por referência, são classes que especificam os tipos de objeto Strings, Arrays Primitivos e Objetos.
+	As variáveis de referência são inicializadas com o valor “null” (nulo). 
+
+** variáveis de instância e variáveis de classe
+*** Uma *variável de instância* é uma variável cujo valor é específico ao objeto e não à classe. Uma variável de instância em geral possui uma valor diferente em cada objeto membro da classe.
+Se vc define a variável no corpo da classe (não de um método) e não utiliza a keyword static, essa variável é de instância. Obs: tipos primitivos também podem ser variáveis de instância.
+
+StackOverflow: variável de instância
+	Esta variável pertence ao objeto, concretamente ela só existe quando objeto é criado. Na classe ela serve apenas de planta de como criar o objeto. Em todos os métodos de instância você pode acessá-la porque internamente tem um parâmetro (this) em todos os métodos de instância já que eles recebem o objeto (geralmente por referência) sem você ver.
+	Elas só podem ser acessadas através de um objeto. Não pode ser acessada pela classe ou outra forma, tem que dizer de qual objeto você quer a variável.
+
+class Exemplo {
+    private int valor;  //***** Tipo primitivo poder ser variável
+				// de instância
+    public String nome;
+}
+
+
+
+
+*** Uma *variável de classe* é uma variável cujo valor é comum a todos os objetos membros da classe. Mudar o valor de uma variável de classe em um objeto membro automaticamente muda o valor para todos os objetos membros.
+Uma variável é considerada como de instância por "default". Para declarar uma variável de classe, acrescenta-se a palavra-chave static. Exemplos:
+
+static int nuhmeroDeInstahnciasDestaClasse;
+static int LEFT = 1;
+
+
+
+** variável automática (variável local)
+São as variáveis dos métodos, geralmente presentes no stack (pode estar no registrador). Eles tem seu tempo de vida gerenciado automaticamente enquanto o método estiver executando. São chamadas de automáticas por isso.
+
+class Exemplo {
+    public static int total;
+    private int valor;
+    public string nome;
+    public string Metodo(int parametro) => (total + valor + parametro).ToString() + nome;
+}
+
+** Diferença entre "Atributo" e "Variável de Instância"???
+
+Informalmente os termos são quase intercambiáveis mesmo. Até certo ponto.
+
+O termo atributo é amplamente difundido em linguagens de modelagem como UML. E é comum os programadores Java se referir às variáveis como atributos do objeto, mas formalmente não são. O termo sequer consta da documentação.
+
+Onde está lendo atributo, comece ler campo, porque é isto que está dizendo quando falamos em linguagens de programação. Para as linguagens atributo é outra coisa não relacionada com o que está sendo falado aqui. É a estória da mentira repetida tantas vezes que passou "ser verdade".
+
+Raramente usa-se o termo campo na comunidade Java, mas ele está presente na documentação linkada acima.
+
+Algumas pessoas preferem o uso de "variáveis de instância" para evitar confusão com outras coisas que podem usar o termo "atributo".
+
+Se são variáveis de instância elas estarão presentes em cada objeto desta classe. Já variáveis de classe são os +atributos+ campos que estão presentes na própria classe e são compartilhados por todos objetos dela.
+
+Estritamente falando, campo é um termo mais geral, assim como "membro" que inclui os campos e métodos da classe.
+
+Um campo pode pertencer à classe ou à instância. Um campo sempre usa uma variável (ou constante) como mecanismo (nunca vi diferente). Então existem variáveis de instância (pertence ao objeto) e variáveis de classe (pertence à classe).
+
+
+
+> Como isso influencia durante o processo de programação?
+
+Na programação em si influencia nada, influencia o processo de comunicação. Todos envolvidos precisam entender do que está se falando. Se as pessoas não entendem do que está se falando elas não executarão corretamente, ou o farão por coincidência, por isso eu bato tanto na tecla de usar os termos corretos, isso influencia no resultado final. Alguns acham que é teoria boba, mas afeta a prática sem a pessoa perceber.
+
+Se deseja que crie uma coisa e escreve outra, aí a pessoa que recebeu a informação usa um método que não resolve o problema, a culpa é sua que não usou o termo correto. Se ela criar um campo estático também foi falha de comunicação. Se usar a terminologia corretamente, dentro do contexto, e a pessoa usar errado, a culpa é dela que não sabe o termo correto.
+
+Muitos livros, blogs, e outras fontes usam o termo sem pensar na necessidade da precisão e no contexto que está sendo usado. Em muitos casos, pode não causar confusão, em outros causam mesmo.
+* Oop
+** Advantages
+Object-oriented programming has several advantages over procedural programming:
+    - OOP is faster and easier to execute
+    - OOP provides a clear structure for the programs
+    - OOP helps to keep the Java code DRY "Don't Repeat Yourself", and makes the code easier to maintain, modify and debug
+    - OOP makes it possible to create full reusable applications with less code and shorter development time
+** Inheritance
+*subclass* (child) - the class that inherits from another class
+*superclass* (parent) - the class being inherited from
+
+** Interface
+An interface is a completely "abstract class" that is used to group related methods with *empty bodies*.
+
+_Interface methods_ are by default *abstract* and *public*.
+_Interface attributes_ are by default *public*, *static* and *final*.
+
+Não é possível definir um método e um interface como sendo final. Ex:
+	final void m3(); //gera erro
+	final static void m4() {;} //gera erro
+
+Em um interface eu posso implementar os métodos static nela mesma. Porém, esses métodos static não podem ser overrided nas classes que assinam a interface:
+	Similar to Default Method in Interface, the static method in an interface can be defined in the interface, but cannot be overridden in Implementation Classes. To use a static method, Interface name should be instantiated with it, as it is a part of the Interface only.
+Na verdade, quando eu declaro um método static em uma interface, eu sou obrigado a implementá-lo ele alí.
+
+	Eu não posso definir, também, um método static como abstract em uma interface:
+		interface A {
+			 abstract static void m4(); //gera erro
+		}
+
+-----
+Se uma classe deixar de implementar algum método da interface, a classe se torna abstrata.
+
+*** Why use Interfaces: R: Give multliple types to an object
+(https://stackoverflow.com/questions/56867/interface-vs-base-class)
+In OOP, one object may have different types. For instance in Java, an ArrayList<E> has the following types: Serializable, Cloneable, Iterable<E>, Collection<E>, List<E>, RandomAccess, AbstractList<E>, AbstractCollection<E> and Object (I hope I have not forgotten anyone). If an object has different types, various consumers will be able use it without be aware of its specificities. I need an Iterable<E> and you give me a ArrayList<E>? It's ok. But if I need now a List<E> and you give me a ArrayList<E>, it's ok too. Etc.
+
+** Abstract Classes and Abstract Methods
+	PN: There is a difference between abstract class and abstract method: in the abstract class we can have methods that are not abstract (with declared/define body = regular methods). Although in abstract methods we can't define a body.
+
+	Pro:
+    _Abstract class_: is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).
+    _Abstract method_: can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).
+
+Uma classe que contém *um* ou mais métodos abstratos deve ser declarada explicitamente como abstrata. Essa classe, no entanto, pode ter métodos concretos (não-abstratos).
+
+Para indicar que um método de uma classe deve ser necessariamente redefinido em cada uma de suas subclasses este método deve ser declarado como abstract.
+
+
+Se uma subclasse é derivada de uma superclasse que contém um método abstrato e se esse método abstrato não for redefinido na subclasse, esse método permanece abstrato na subclasse. Com isso, a subclasse também
+deverá ser declarada explicitamente como abstract.
+** Método default
+O modificador default permite que se adicione métodos a uma interface sem o risco de perder compatibilidade com versões anteriores. A implementação do método default da interface é usada caso a classe concreta não o implemente.
+*** Exemplo (tirado de: https://medium.com/@RafaelSermenho/m%C3%A9todos-default-java-8-d0ca312fea47 )
+public interface ICaixaEletronico {
+	void sacar(float valor);
+}
+
+
+public class CaixaEletronico implements ICaixaEletronico {
+	@Override
+	public void sacar(float valor) {
+		System.out.println("Vou sacar " + valor);
+	}
+}
+
+
+No cenário atual, se eu definir um método novo na interface ICaixaEletronico, eu serei obrigado a implementá-lo na classe CaixaEletronico. Nessa hora, o modificador default vem para auxiliar.
+
+public interface ICaixaEletronico {
+	void sacar(float valor);
+	default void verificaFraude(){
+		System.out.println("Verificação de fraude iniciada");
+	}
+}
+
+Note que na interface, eu defini o método verificaFraude() e já coloquei a implementação padrão que será utilizada
+Utilizando o modificador default na definição do método na interface, não precisei implementar o método na classe CaixaEletrônico
+
+Posso chamar o método verificaFraude normalmente:
+
+public class Principal {
+	public static void main(String[] args) {
+		CaixaEletronico caixa = new CaixaEletronico();
+		caixa.verificaFraude();
+		caixa.sacar(10);
+	}
+}
+
+* Oop (explicando para alguém)
+** What is OOP?
+	It's a paradigm of programming where the focus is in objects: their properties and attitudes.
+
+** Why use OOP?
+	It makes the behavior of the algorithm more clear.
+
+** What are the main aspects of OOP in Java?
+*** Polymorphism
+*** Inheritance
+*** Encapsulation
+*** Abstraction
+* OOP (curso da DIO)
+** Abstração
+"Abstração é a habilidade de concentrar nos aspectos essenciais de um contexto qualquer ignorando características menos importantes ou acidentais."
+AP:Partirdo do todo de um objetivo e escrever o código em partes.
+Exemplo: simular quanto um consumidor paga por uma camiseta que tem um desconto de 20%.
+* Regrinhas gerais do Java 8 tirados do curso e OCP-OCA
+- Enum cannot be private or protected.
+
+* Básico
+** IEEE 754
+https://www.youtube.com/watch?v=PDgT0T0Yodo
+
+
+* Optional
+** fontes: 
+https://blog.algaworks.com/chega-de-nullpointerexception/
+https://www.baeldung.com/java-optional
+
+** na possibilidade do Optional ser uma caixa com um null dentro 
+Seguro seguro = new Seguro("Total com franquia reduzida", new BigDecimal("600"));
+Optional seguroOpcional = Optional.of(seguro);
+
+Repare que o Optional usa o generics para determinar o tipo de objeto que ele está guardando, no caso acima, Seguro.
+ 
+Antes de aprendermos a mapear um Optional, deixa eu só te contar que, se você tentar passar null para o método of, será lançado uma NullPointerException. Então, se existir a possibilidade da criação de um Optional vazio, utilize o método ofNullable, veja abaixo:
+
+Seguro seguro = null;
+Optional seguroOpcional = Optional.ofNullable(seguro);
+
+------------------------------------
+But in case we expect some null values, we can use the ofNullable() method:
+
+@Test
+public void givenNonNull_whenCreatesNullable_thenCorrect() {
+    String name = "baeldung";
+    Optional<String> opt = Optional.ofNullable(name);
+    assertTrue(opt.isPresent());
+}
+
+By doing this, if we pass in a null reference, it doesn't throw an exception but rather returns an empty Optional object:
+
+@Test
+public void givenNull_whenCreatesNullable_thenCorrect() {
+    String name = null;
+    Optional<String> opt = Optional.ofNullable(name);
+    assertFalse(opt.isPresent());
+}
+
+** faz algo se tem algo no optional
+Pense na seguinte situação: queremos imprimir na tela o valor da franquia, mas caso o seguro não exista, simplesmente não iremos fazer nada.
+Repare que, com um código bem simples de entender conseguimos fazer isso, veja abaixo:
+	seguroOpcional.map(Seguro::getValorFranquia).ifPresent(System.out::println);
+Deixa eu te contar como você pode ler esse código em português: no objeto seguroOpcional, pegue o valor da franquia e, caso exista, imprima na tela por favor.
+
+** orElse()
+String cobertura = motoristas.porNome("João")
+      .flatMap(Motorista::getCaminhao)
+      .flatMap(Caminhao::getSeguro)
+      .map(Seguro::getCobertura)
+      .orElse("Sem seguro");
+
+Você está se perguntando, o que é esse orElse ai?
+
+É outro método bem interessante do Optional. Leia da seguinte forma: se o Optional tiver algum resultado, retorne, caso contrário retorne esse valor aqui.
+
+No caso do código acima, caso o motorista não tenha caminhão, ou não tenha seguro, será retornado a String “Sem seguro”.
+---------------------------------------
+
+@Test
+public void whenOrElseWorks_thenCorrect() {
+    String nullName = null;
+    String name = Optional.ofNullable(nullName).orElse("john");
+    assertEquals("john", name);
+}
+** orElseGet()
+The orElseGet() method is similar to orElse(). However, instead of taking a value to return if the Optional value is not present, it takes a supplier functional interface, which is invoked and returns the value of the invocation: 
+
+@Test
+public void whenOrElseGetWorks_thenCorrect() {
+    String nullName = null;
+    String name = Optional.ofNullable(nullName).orElseGet(() -> "john");
+    assertEquals("john", name);
+** Difference Between orElse and orElseGet() (MUITO IMPORTANTE)
+*** Pro
+To a lot of programmers who are new to Optional or Java 8, the difference between orElse() and orElseGet() is not clear. As a matter of fact, these two methods give the impression that they overlap each other in functionality.
+
+However, there's a subtle but very important difference between the two that can affect the performance of our code drastically if not well understood.
+
+Let's create a method called getMyDefault() in the test class, which takes no arguments and returns a default value:
+
+#+BEGIN_SRC java :results output :exports both
+public String getMyDefault() {
+    System.out.println("Getting Default Value");
+    return "Default Value";
+}
+#+END_SRC
+
+Let's see two tests and observe their side effects to establish both where orElse() and orElseGet() overlap and where they differ:
+
+#+BEGIN_SRC java :results output :exports both
+@Test
+public void whenOrElseGetAndOrElseOverlap_thenCorrect() {
+    String text = null;
+
+    String defaultText = Optional.ofNullable(text).orElseGet(this::getMyDefault);
+    assertEquals("Default Value", defaultText);
+
+    defaultText = Optional.ofNullable(text).orElse(getMyDefault());
+    assertEquals("Default Value", defaultText);
+}
+#+END_SRC
+
+In the above example, we wrap a null text inside an Optional object and attempt to get the wrapped value using each of the two approaches.
+
+The side effect is:
+
+Getting default value...
+Getting default value...
+
+The getMyDefault() method is called in each case. It so happens that when the wrapped value is not present, then both orElse() and orElseGet() work exactly the same way.
+
+Now let's run another test where the value is present, and ideally, the default value should not even be created:
+
+#+BEGIN_SRC java :results output :exports both
+@Test
+public void whenOrElseGetAndOrElseDiffer_thenCorrect() {
+    String text = "Text present";
+
+    System.out.println("Using orElseGet:");
+    String defaultText 
+      = Optional.ofNullable(text).orElseGet(this::getMyDefault);
+    assertEquals("Text present", defaultText);
+
+    System.out.println("Using orElse:");
+    defaultText = Optional.ofNullable(text).orElse(getMyDefault());
+    assertEquals("Text present", defaultText);
+}
+#+END_SRC
+
+In the above example, we are no longer wrapping a null value, and the rest of the code remains the same.
+
+Now let's take a look at the side effect of running this code:
+
+Using orElseGet:
+Using orElse:
+Getting default value...
+
+Notice that when using orElseGet() to retrieve the wrapped value, the getMyDefault() method is not even invoked since the contained value is present.
+
+However, when using orElse(), whether the wrapped value is present or not, the default object is created. So in this case, we have just created one redundant object that is never used.
+
+In this simple example, there is no significant cost to creating a default object, as the JVM knows how to deal with such. However, when a method such as getMyDefault() has to make a web service call or even query a database, the cost becomes very obvious.
+
+AP: O QUE EU ENTENDI DESSA SEÇÃO, COM MINHAS PALAVRAS
+*** AP
+**** Apenas com atribuição de valor (sem chamar método)
+
+Quando apenas queremos atribuir um valor a uma variável, como por exemplo:
+#+BEGIN_SRC java :results output :exports both
+	String nullName = null;
+	String name = Optional.ofNullable(nullName).orElse("john");
+	String pedro = Optional.ofNullable(nullName).orElseGet(() ->"Pedro");
+#+END_SRC
+é indiferente usarmos orElse ou orElseGet.
+***** Exemplo com nome sendo null
+#+BEGIN_SRC java :results output :exports both
+@Test
+public void testeAPrendizado() {
+	//String nome = "Lucas";
+	String nome = null;
+	String name = Optional.ofNullable(nome).orElse("João");
+	System.out.println("Name is: " + name);
+	
+	String pedro = Optional.ofNullable(nome).orElseGet(() ->"Pedro");
+	System.out.println("Name is: " + pedro);
+}
+#+END_SRC
+
+Saída:
+Name is: João
+Name is: Pedro
+
+	
+***** Exemplo com nome "tendo valor"
+#+BEGIN_SRC java :results output :exports both
+@Test
+public void testeAPrendizado() {
+	String nome = "Lucas";
+	//String nome = null;
+	String name = Optional.ofNullable(nome).orElse("João");
+	System.out.println("Name is: " + name);
+	
+	String pedro = Optional.ofNullable(nome).orElseGet(() ->"Pedro");
+	System.out.println("Name is: " + pedro);
+}
+#+END_SRC
+
+Saída:
+Name is: Lucas
+Name is: Lucas
+
+**** Com chamada de método dentro do orElse/orElseGet
+No orElse ele roda o método com o "nome" não sendo null, mas não atribui valor.
+
+Se o "nome" não for null ele não roda o método do orElseGet, muito menos atribui valor como retorno dessa mesma interface.
+
+***** Exemplo com nome sendo null
+#+BEGIN_SRC java :results output :exports both
+public String getNameJoao() {
+    System.out.println("Retornando nome João");
+    return "João";
+}
+
+public String getNamePedro() {
+    System.out.println("Agora Pedro");
+    return "Pedro";
+}
+
+@Test
+public void testeAPrendizado() {
+	//String nome = "Lucas";
+	String nome = null;
+	String name = Optional.ofNullable(nome).orElse(getNameJoao());
+	System.out.println("Name is: " + name);
+	
+	String pedro = Optional.ofNullable(nome).orElseGet(this::getNamePedro);
+	System.out.println("Name is: " + pedro);
+}
+#+END_SRC
+
+Saída:
+Retornando nome João
+Name is: João
+Agora Pedro
+Name is: Pedro
+
+***** Exemplo com nome recebendo valor
+#+BEGIN_SRC java :results output :exports both
+@Test
+public void testeAPrendizado() {
+	String nome = "Lucas"; //Entrou essa linha agora (saiu a de baixo)
+//	String nome = null;
+	String name =  Optional.ofNullable(nome).orElse(getNameJoao());
+	System.out.println("Name is: " + name);
+	
+	String pedro = Optional.ofNullable(nome).orElseGet(this::getNamePedro);
+	System.out.println("Name is: " + pedro);
+}
+#+END_SRC
+
+Saída:
+Retornando nome João
+Name is: Lucas
+Name is: Lucas
+
+** ifPresent()
+
+	@Test
+	public void givenOptional_whenIfPresentWorks_thenCorrect() {
+	    Optional<String> opt = Optional.of("baeldung");
+	    opt.ifPresent(name -> System.out.println(name.length()));
+	}
+
+** Exceptions With orElseThrow()
+
+The orElseThrow() method follows from orElse() and orElseGet() and adds a new approach for handling an absent value.
+
+Instead of returning a default value when the wrapped value is not present, it throws an exception:
+
+#+BEGIN_SRC java :results output :exports both
+@Test(expected = IllegalArgumentException.class)
+public void whenOrElseThrowWorks_thenCorrect() {
+    String nullName = null;
+    String name = Optional.ofNullable(nullName).orElseThrow(
+      IllegalArgumentException::new);
+}
+#+END_SRC
+
+Method references in Java 8 come in handy here, to pass in the exception constructor.
+
+Java 10 introduced a simplified no-arg version of orElseThrow() method. In case of an empty Optional it throws a NoSuchElementException:
+
+#+BEGIN_SRC java :results output :exports both
+@Test(expected = NoSuchElementException.class)
+public void whenNoArgOrElseThrowWorks_thenCorrect() {
+    String nullName = null;
+    String name = Optional.ofNullable(nullName).orElseThrow();
+}
+#+END_SRC
+
+** Returning Value With get()
+
+The final approach for retrieving the wrapped value is the get() method:
+
+#+BEGIN_SRC java :results output :exports both
+@Test
+public void givenOptional_whenGetsValue_thenCorrect() {
+    Optional<String> opt = Optional.of("baeldung");
+    String name = opt.get();
+    assertEquals("baeldung", name);
+}
+#+END_SRC
+
+However, unlike the previous three approaches, get() can only return a value if the wrapped object is not null; otherwise, it throws a no such element exception:
+
+#+BEGIN_SRC java :results output :exports both
+@Test(expected = NoSuchElementException.class)
+public void givenOptionalWithNull_whenGetThrowsException_thenCorrect() {
+    Optional<String> opt = Optional.ofNullable(null);
+    String name = opt.get();
+}
+#+END_SRC
+
+This is the major flaw of the get() method. Ideally, Optional should help us avoid such unforeseen exceptions. Therefore, this approach works against the objectives of Optional and will probably be deprecated in a future release.
+
+So, it's advisable to use the other variants that enable us to prepare for and explicitly handle the null case.
+
+** Conditional Return With filter()
+	We can run an inline test on our wrapped value with the filter method. It takes a predicate as an argument and returns an Optional object. If the wrapped value passes testing by the predicate, then the Optional is returned as-is.
+
+However, if the predicate returns false, then it will return an empty Optional:
+
+#+BEGIN_SRC java
+@Test
+public void whenOptionalFilterWorks_thenCorrect() {
+    Integer year = 2016;
+    Optional<Integer> yearOptional = Optional.of(year);
+    boolean is2016 = yearOptional.filter(y -> y == 2016).isPresent();
+    assertTrue(is2016);
+    boolean is2017 = yearOptional.filter(y -> y == 2017).isPresent();
+    assertFalse(is2017);
+}
+#+END_SRC
+
+The filter method is normally used this way to reject wrapped values based on a predefined rule. We could use it to reject a wrong email format or a password that is not strong enough.
+
+Let's look at another meaningful example. Say we want to buy a modem, and we only care about its price.
+
+We receive push notifications on modem prices from a certain site and store these in objects:
+
+#+BEGIN_SRC java
+public class Modem {
+    private Double price;
+
+    public Modem(Double price) {
+        this.price = price;
+    }
+    // standard getters and setters
+}
+#+END_SRC
+
+We then feed these objects to some code whose sole purpose is to check if the modem price is within our budget range.
+
+Let's now take a look at the code without Optional:
+
+#+BEGIN_SRC java
+public boolean priceIsInRange1(Modem modem) {
+    boolean isInRange = false;
+
+    if (modem != null && modem.getPrice() != null 
+      && (modem.getPrice() >= 10 
+        && modem.getPrice() <= 15)) {
+
+        isInRange = true;
+    }
+    return isInRange;
+}
+#+END_SRC
+
+Pay attention to how much code we have to write to achieve this, especially in the if condition. The only part of the if condition that is critical to the application is the last price-range check; the rest of the checks are defensive:
+
+#+BEGIN_SRC java
+@Test
+public void whenFiltersWithoutOptional_thenCorrect() {
+    assertTrue(priceIsInRange1(new Modem(10.0)));
+    assertFalse(priceIsInRange1(new Modem(9.9)));
+    assertFalse(priceIsInRange1(new Modem(null)));
+    assertFalse(priceIsInRange1(new Modem(15.5)));
+    assertFalse(priceIsInRange1(null));
+}
+#+END_SRC
+
+Apart from that, it's possible to forget about the null checks over a long day without getting any compile-time errors.
+
+Now let's look at a variant with Optional#filter:
+
+#+BEGIN_SRC java
+public boolean priceIsInRange2(Modem modem2) {
+     return Optional.ofNullable(modem2)
+       .map(Modem::getPrice)
+       .filter(p -> p >= 10)
+       .filter(p -> p <= 15)
+       .isPresent();
+ }
+#+END_SRC
+
+The map call is simply used to transform a value to some other value. Keep in mind that this operation does not modify the original value.
+
+In our case, we are obtaining a price object from the Model class. We will look at the map() method in detail in the next section.
+
+First of all, if a null object is passed to this method, we don't expect any problem.
+
+Secondly, the only logic we write inside its body is exactly what the method name describes — price-range check. Optional takes care of the rest:
+
+#+BEGIN_SRC java
+@Test
+public void whenFiltersWithOptional_thenCorrect() {
+    assertTrue(priceIsInRange2(new Modem(10.0)));
+    assertFalse(priceIsInRange2(new Modem(9.9)));
+    assertFalse(priceIsInRange2(new Modem(null)));
+    assertFalse(priceIsInRange2(new Modem(15.5)));
+    assertFalse(priceIsInRange2(null));
+}
+#+END_SRC
+
+The previous approach promises to check price range but has to do more than that to defend against its inherent fragility. Therefore, we can use the filter method to replace unnecessary if statements and reject unwanted values.
+
+** Transforming Value With map()
+
+In the previous section, we looked at how to reject or accept a value based on a filter.
+
+We can use a similar syntax to transform the Optional value with the map() method:
+
+#+BEGIN_SRC java
+@Test
+public void givenOptional_whenMapWorks_thenCorrect() {
+    List<String> companyNames = Arrays.asList(
+      "paypal", "oracle", "", "microsoft", "", "apple");
+    Optional<List<String>> listOptional = Optional.of(companyNames);
+
+    int size = listOptional
+      .map(List::size)
+      .orElse(0);
+    assertEquals(6, size);
+}
+#+END_SRC
+
+In this example, we wrap a list of strings inside an Optional object and use its map method to perform an action on the contained list. The action we perform is to retrieve the size of the list.
+
+The map method returns the result of the computation wrapped inside Optional. We then have to call an appropriate method on the returned Optional to retrieve its value.
+
+Notice that the filter method simply performs a check on the value and returns an Optional describing this value only if it matches the given predicate. Otherwise returns an empty Optional. The map method however takes the existing value, performs a computation using this value, and returns the result of the computation wrapped in an Optional object:
+
+#+BEGIN_SRC java
+@Test
+public void givenOptional_whenMapWorks_thenCorrect2() {
+    String name = "baeldung";
+    Optional<String> nameOptional = Optional.of(name);
+
+    int len = nameOptional
+     .map(String::length)
+     .orElse(0);
+    assertEquals(8, len);
+}
+#+END_SRC
+
+We can chain map and filter together to do something more powerful.
+
+Let's assume we want to check the correctness of a password input by a user. We can clean the password using a map transformation and check its correctness using a filter:
+
+#+BEGIN_SRC java
+@Test
+public void givenOptional_whenMapWorksWithFilter_thenCorrect() {
+    String password = " password ";
+    Optional<String> passOpt = Optional.of(password);
+    boolean correctPassword = passOpt.filter(
+      pass -> pass.equals("password")).isPresent();
+    assertFalse(correctPassword);
+
+    correctPassword = passOpt
+      .map(String::trim)
+      .filter(pass -> pass.equals("password"))
+      .isPresent();
+    assertTrue(correctPassword);
+}
+#+END_SRC
+
+As we can see, without first cleaning the input, it will be filtered out — yet users may take for granted that leading and trailing spaces all constitute input. So, we transform a dirty password into a clean one with a map before filtering out incorrect ones.
+
+** flatMap() 
+Já te falei que o método map retorna um outro Optional, certo? Então você poderia pensar, basta eu encadear várias chamadas desse método, mas… veja só, o código abaixo não compila:
+	
+Optional caminhaoOpcional = motoristas.porNome("João")
+      .map(Motorista::getCaminhao);
+
+Sabe por quê? Porque como o atributo em Motorista é do tipo Optional<Caminhao>, ele irá retornar um Optional<Optional<Caminhao>>.
+
+Pensando nisso que eles criaram o método flatMap, que podemos traduzir como “achate o Optional“, ou seja, ao invés de optional de optional de caminhão, será devolvido um optional de caminhão. Veja abaixo, o código agora está certo, compila sem problemas:
+
+Optional caminhaoOpcional = motoristas.porNome("João")
+      .flatMap(Motorista::getCaminhao);
+---------------
+String cobertura = motoristas.porNome("João")
+      .flatMap(Motorista::getCaminhao)
+      .flatMap(Caminhao::getSeguro)
+      .map(Seguro::getCobertura)
+      .orElse("Sem seguro");
+
+Repare que usamos o map em map(Seguro::getCobertura), pois nesse caso, o atributo cobertura de Seguro já é uma String direta, e não um Optional.
+
+** Transforming Value With flatMap()
+
+Just like the map() method, we also have the flatMap() method as an alternative for transforming values. The difference is that map transforms values only when they are unwrapped whereas flatMap takes a wrapped value and unwraps it before transforming it.
+
+Previously, we created simple String and Integer objects for wrapping in an Optional instance. However, frequently, we will receive these objects from an accessor of a complex object.
+
+To get a clearer picture of the difference, let's have a look at a Person object that takes a person's details such as name, age and password:
+
+#+BEGIN_SRC java
+public class Person {
+    private String name;
+    private int age;
+    private String password;
+
+    public Optional<String> getName() {
+        return Optional.ofNullable(name);
+    }
+
+    public Optional<Integer> getAge() {
+        return Optional.ofNullable(age);
+    }
+
+    public Optional<String> getPassword() {
+        return Optional.ofNullable(password);
+    }
+
+    // normal constructors and setters
+}
+#+END_SRC
+
+We would normally create such an object and wrap it in an Optional object just like we did with String.
+freestar
+
+Alternatively, it can be returned to us by another method call:
+
+#+BEGIN_SRC java
+Person person = new Person("john", 26);
+Optional<Person> personOptional = Optional.of(person);
+#+END_SRC
+
+Notice now that when we wrap a Person object, it will contain nested Optional instances:
+
+#+BEGIN_SRC java
+@Test
+public void givenOptional_whenFlatMapWorks_thenCorrect2() {
+    Person person = new Person("john", 26);
+    Optional<Person> personOptional = Optional.of(person);
+
+    Optional<Optional<String>> nameOptionalWrapper  
+      = personOptional.map(Person::getName);
+    Optional<String> nameOptional  
+      = nameOptionalWrapper.orElseThrow(IllegalArgumentException::new);
+    String name1 = nameOptional.orElse("");
+    assertEquals("john", name1);
+
+    String name = personOptional
+      .flatMap(Person::getName)
+      .orElse("");
+    assertEquals("john", name);
+}
+#+END_SRC
+
+Here, we're trying to retrieve the name attribute of the Person object to perform an assertion.
+
+Note how we achieve this with map() method in the third statement, and then notice how we do the same with flatMap() method afterwards.
+
+The Person::getName method reference is similar to the String::trim call we had in the previous section for cleaning up a password.
+
+The only difference is that getName() returns an Optional rather than a String as did the trim() operation. This, coupled with the fact that a map transformation wraps the result in an Optional object, leads to a nested Optional.
+
+While using map() method, therefore, we need to add an extra call to retrieve the value before using the transformed value. This way, the Optional wrapper will be removed. This operation is performed implicitly when using flatMap.
+
+** Chaining Optionals in Java 8
+Sometimes, we may need to get the first non-empty Optional object from a number of Optionals. In such cases, it would be very convenient to use a method like orElseOptional(). Unfortunately, such operation is not directly supported in Java 8.
+
+Let's first introduce a few methods that we'll be using throughout this section:
+
+#+BEGIN_SRC java
+private Optional<String> getEmpty() {
+    return Optional.empty();
+}
+
+private Optional<String> getHello() {
+    return Optional.of("hello");
+}
+
+private Optional<String> getBye() {
+    return Optional.of("bye");
+}
+
+private Optional<String> createOptional(String input) {
+    if (input == null || "".equals(input) || "empty".equals(input)) {
+        return Optional.empty();
+    }
+    return Optional.of(input);
+}
+#+END_SRC
+
+In order to chain several Optional objects and get the first non-empty one in Java 8, we can use the Stream API:
+
+#+BEGIN_SRC java
+@Test
+public void givenThreeOptionals_whenChaining_thenFirstNonEmptyIsReturned() {
+    Optional<String> found = Stream.of(getEmpty(), getHello(), getBye())
+      .filter(Optional::isPresent)
+      .map(Optional::get)
+      .findFirst();
+    
+    assertEquals(getHello(), found);
+}
+#+END_SRC
+
+The downside of this approach is that all of our get methods are always executed, regardless of where a non-empty Optional appears in the Stream.
+
+If we want to lazily evaluate the methods passed to Stream.of(), we need to use the method reference and the Supplier interface:
+#+BEGIN_SRC java
+@Test
+public void givenThreeOptionals_whenChaining_thenFirstNonEmptyIsReturnedAndRestNotEvaluated() {
+    Optional<String> found =
+      Stream.<Supplier<Optional<String>>>of(this::getEmpty, this::getHello, this::getBye)
+        .map(Supplier::get)
+        .filter(Optional::isPresent)
+        .map(Optional::get)
+        .findFirst();
+
+    assertEquals(getHello(), found);
+}
+#+END_SRC
+
+In case we need to use methods that take arguments, we have to resort to lambda expressions:
+
+#+BEGIN_SRC java
+@Test
+public void givenTwoOptionalsReturnedByOneArgMethod_whenChaining_thenFirstNonEmptyIsReturned() {
+    Optional<String> found = Stream.<Supplier<Optional<String>>>of(
+      () -> createOptional("empty"),
+      () -> createOptional("hello")
+    )
+      .map(Supplier::get)
+      .filter(Optional::isPresent)
+      .map(Optional::get)
+      .findFirst();
+
+    assertEquals(createOptional("hello"), found);
+}
+#+END_SRC
+
+Often, we'll want to return a default value in case all of the chained Optionals are empty. We can do so just by adding a call to orElse() or orElseGet():
+#+BEGIN_SRC java
+@Test
+public void givenTwoEmptyOptionals_whenChaining_thenDefaultIsReturned() {
+    String found = Stream.<Supplier<Optional<String>>>of(
+      () -> createOptional("empty"),
+      () -> createOptional("empty")
+    )
+      .map(Supplier::get)
+      .filter(Optional::isPresent)
+      .map(Optional::get)
+      .findFirst()
+      .orElseGet(() -> "default");
+
+    assertEquals("default", found);
+} 
+#+END_SRC
+** JDK 9 Optional API
+ver tb: https://www.baeldung.com/java-9-optional
+The release of Java 9 added even more new methods to the Optional API:
+
+    or() method for providing a supplier that creates an alternative Optional
+    ifPresentOrElse() method that allows executing an action if the Optional is present or another action if not
+    stream() method for converting an Optional to a Stream
+
+** Misuse of Optionals
+(AP: Esse parágrafo abaixo é a conclusão do final desse tópico... eu coloquei ele aqui para saber do que vai tratar esse tópico:)
+	So, there are solutions to avoid using Optionals as method parameters. The intent of Java when releasing Optional was to use it as a return type, thus indicating that a method could return an empty value. As a matter of fact, the practice of using Optional as a method parameter is even discouraged by some code inspectors.
+
+
+Finally, let's see a tempting, however dangerous, way to use Optionals: passing an Optional parameter to a method.
+
+Imagine we have a list of Person and we want a method to search through that list for people with a given name. Also, we would like that method to match entries with at least a certain age, if it's specified.
+
+With this parameter being optional, we come with this method:
+
+#+BEGIN_SRC java
+public static List<Person> search(List<Person> people, String name, Optional<Integer> age) {
+    // Null checks for people and name
+    return people.stream()
+            .filter(p -> p.getName().equals(name))
+            .filter(p -> p.getAge().get() >= age.orElse(0))
+            .collect(Collectors.toList());
+}
+#+END_SRC
+
+Then we release our method, and another developer tries to use it:
+
+someObject.search(people, "Peter", null);
+
+Now the developer executes its code and gets a NullPointerException. There we are, having to null check our optional parameter, which defeats our initial purpose in wanting to avoid this kind of situation.
+
+Here are some possibilities we could have done to handle it better:
+
+#+BEGIN_SRC java
+public static List<Person> search(List<Person> people, String name, Integer age) {
+    // Null checks for people and name
+    final Integer ageFilter = age != null ? age : 0;
+
+    return people.stream()
+            .filter(p -> p.getName().equals(name))
+            .filter(p -> p.getAge().get() >= ageFilter)
+            .collect(Collectors.toList());
+}
+#+END_SRC
+
+There, the parameter's still optional, but we handle it in only one check.
+
+Another possibility would have been to create two overloaded methods:
+
+#+BEGIN_SRC java
+public static List<Person> search(List<Person> people, String name) {
+    return doSearch(people, name, 0);
+}
+
+public static List<Person> search(List<Person> people, String name, int age) {
+    return doSearch(people, name, age);
+}
+
+private static List<Person> doSearch(List<Person> people, String name, int age) {
+    // Null checks for people and name
+    return people.stream()
+            .filter(p -> p.getName().equals(name))
+            .filter(p -> p.getAge().get().intValue() >= age)
+            .collect(Collectors.toList());
+}
+#+END_SRC
+
+That way we offer a clear API with two methods doing different things (though they share the implementation).
+
+	So, there are solutions to avoid using Optionals as method parameters. The intent of Java when releasing Optional was to use it as a return type, thus indicating that a method could return an empty value. As a matter of fact, the practice of using Optional as a method parameter is even discouraged by some code inspectors.
+
+** Optional and Serialization
+As discussed above, Optional is meant to be used as a return type. Trying to use it as a field type is not recommended.
+
+Additionally, using Optional in a serializable class will result in a NotSerializableException. Our article Java Optional as Return Type (https://www.baeldung.com/java-optional-return) further addresses the issues with serialization.
+
+And, in Using Optional With Jackson (https://www.baeldung.com/jackson-optional), we explain what happens when Optional fields are serialized, along with a few workarounds to achieve the desired results.
+* Spring
+** Annotations
+@Service
+camada de serviço
+
+@Controller
+classes controladoras
+
+@Repositor
+camada de persistencia
+
+
+@Component
+anotar coisa geral que não se enquadra nas acima
+
+** Conceitos
+*** DAO
+Objeto de acesso a dados (acrônimo do inglês Data Access Object - DAO), é um padrão para aplicações que utilizam persistência de dados, onde tem a separação das regras de negócio das regras de acesso a banco de dados, implementada com linguagens de programação orientadas a objetos (como por exemplo Java) e arquitetura MVC, onde todas as funcionalidades de bancos de dados, tais como obter conexões, mapear objetos para tipos de dados SQL ou executar comandos SQL, devem ser feitas por classes DAO. 
+
+*** dto
+Objeto de Transferência de Dados (do inglês, Data transfer object, ou simplesmente DTO), é um padrão de projeto de software usado para transferir dados entre subsistemas de um software. DTOs são frequentemente usados em conjunção com objetos de acesso a dados para obter dados de um banco de dados.
+
+A diferença entre objetos de transferência de dados e objetos de negócio ou objetos de acesso a dados é que um DTO não possui comportamento algum, exceto o de armazenamento e obtenção de seus próprios dados. DTOs são objetos simples que não contêm qualquer lógica de negócio que requeira testes.
+
+* Spring Boot
+** Qual a diferença em relação ao Spring-MVC
+Com Spring Boot sozinho: não há projeto web.
+O Spring MVC está no meio do Spring Boot quando rodamos uma aplicação web.
+
+Spring MVC e Spring Boot não só podem, como devem rodar juntos em uma aplicação web. Nesse caso o Spring Boot age no sentindo de configurar o projeto.
+
+** Relacionamento @ManyToOne
+esse site ensina simples e facilmente: http://www.universidadejava.com.br/materiais/jpa-manytoone/
+
+eu tenho um projeto salvo de one o many que tirei dele: /media/lucas/DRIVE_E/java/Spring_REST/PROJETOS_PADRAO_DO_STS/spring-boot-one-to-many-example2
+
+*** Question 1
+
+
+I think I misunderstood the meaning of cascading in the context of a @ManyToOne relationship.
+
+The case:
+
+public class User {
+
+   @OneToMany(fetch = FetchType.EAGER)
+   protected Set<Address> userAddresses;
+
+}
+
+public class Address {
+
+   @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+   protected User addressOwner;
+
+}
+
+What is the meaning of the cascade = CascadeType.ALL? For example, if I delete a certain address from the database, how does the fact that I added the cascade = CascadeType.ALL affect my data (the User, I guess)?
+
+
+*** Answer 1
+https://stackoverflow.com/questions/13027214/what-is-the-meaning-of-the-cascadetype-all-for-a-manytoone-jpa-association
+The meaning of CascadeType.ALL is that the persistence will propagate (cascade) all EntityManager operations (PERSIST, REMOVE, REFRESH, MERGE, DETACH) to the relating entities.
+
+It seems in your case to be a bad idea, as removing an Address would lead to removing the related User. As a user can have multiple addresses, the other addresses would become orphans. However the inverse case (annotating the User) would make sense - if an address belongs to a single user only, it is safe to propagate the removal of all addresses belonging to a user if this user is deleted.
+
+BTW: you may want to add a mappedBy="addressOwner" attribute to your User to signal to the persistence provider that the join column should be in the ADDRESS table.
+
+** Omissão do argumento "method"
+
+@RequestMapping(method = RequestMethod.GET)
+
+A primeira coisa a se observar é que a propriedade method da nossa anotação está especificando
+um método HTTP que é o GET, ou seja, para a ação atender a requisição, a mesma deve ser do tipo
+GET.
+A propriedade method pode ser omitida. Se assim fosse, a ação passaria a responder a todos os
+métodos HTTP (GET, POST, PUT, DELETE, etc.).
+* Streams
+uma forma de trabalhar coleções
+** .filter(...) 
+retorna um outro stream
+
+** como transformar uma stream em List?
+exemplo:
+List<Categoria> categorias = produtos.stream()
+	.filter(p -> p.getStatus().equals(Status.ATIVO)
+	.map(Produto::getCategoria)
+	.collect(Collectors.toList());
+
+** distinct()
+exemplo:
+List<Categoria> categorias = produtos.stream()
+	.filter(p -> p.getStatus().equals(Status.ATIVO)
+	.map(Produto::getCategoria)
+	.distinct()        //não repete elementos que já foram adicionados
+	.collect(Collectors.toList());
+
+
+** anyMatch()
+boolean temPicanha = produtos.stream()
+	.anyMatch(p -> p.getNome().equals("Picanha 1kg");
+
+ao encontrar o primerio elemento que tem por nome "Picanha 1kg" ele já
+para de procurar
+
+** map(
+
+** reduce()
+BigDecimal totalPreco = produtos.stream()
+	.filter(p -> p.getStatus().equals(Status.ATIVO))
+	.map(Produto::getPreco)     //retorna uma stream de preços!!!
+	.reduce(BigDecimal.ZERO, BigDecimal::add); //soma todos os preços dos produtos
+
+** reduce()
+BigDecimal totalPreco = produtos.stream()
+	.filter(p -> p.getStatus().equals(Status.ATIVO))
+	.map(Produto::getPreco)     //retorna uma stream de preços!!!
+	.reduce(BigDecimal.ZERO, BigDecimal::add); //soma todos os preços dos produtos
+
+* String
+** Regex:
+*** kata nível 8
+  Given a string s, write a method (function) that will return true if its a valid single 
+  integer or floating number or false if its not.
+
+Valid examples, should return true:
+
+isDigit("3")
+isDigit("  3  ")
+isDigit("-3.23")
+
+should return false:
+
+isDigit("3-4")
+isDigit("  3   5")
+isDigit("3 5")
+isDigit("zero")
+
+**** resolução usando REGEX 1
+public class MyUtilities{
+
+  private static final String NUMBER_REGEX =
+      "\\s*"      // any amount of whitespace
+      + "-?"      // optional negative sign
+      + "\\d+"    // one or more digits
+      + "(:?"     // start of factional part
+      + "\\."   // literal period
+      + "\\d+"  // one or more digits
+      + ")?"      // fractional part is optional
+      + "\\s*";   // any amount of whitespace
+
+  public boolean isDigit(String s)
+  {
+      return s.matches(NUMBER_REGEX);
+  }
+}
+**** resolução usando REGEX 2
+  public boolean isDigit(String s)
+  {
+      //String regex = "-?[1-9]\\d*|0";
+      String regex = "-?\\d+(\\.\\d+)?";
+      if (s.matches(regex)){
+        return true;
+      }
+      return false;
+  }
+**** resolução usando REGEX 3
+public class MyUtilities{
+
+  public boolean isDigit(String s)
+  {
+      return s.matches("^-?[0-9]+(\\.[0-9]+)?$");
+  }
+}
+
+* Nexti
+** Tests
+*** Tests (==JUnit? No) (uso do @SpringBootTest)
+**** TODO AP: Usa essa annotation para não carregar projeto inteiro para rodar os testes? 
+(tirei isso da seção abaixo... porém no teste para ingressão na Nexti tinha esse annotation, e ele roda o projeto main antes dos testes.
+**** Integration Tests vs. Unit Tests
+
+Before we start into integration tests with Spring Boot, let’s define what sets an integration test apart from a unit test.
+
+A unit test covers a single “unit”, where a unit commonly is a single class, but can also be a cluster of cohesive classes that is tested in combination.
+
+An integration test can be any of the following:
+
+ - a test that covers multiple “units”. It tests the interaction between two or more clusters of cohesive classes.
+
+ - a test that covers multiple layers. This is actually a specialization of the first case and might cover the interaction between a business service and the persistence layer, for instance.
+
+- a test that covers the whole path through the application. In these tests, we send a request to the application and check that it responds correctly and has changed the database state according to our expectations.
+
+Spring Boot provides the @SpringBootTest annotation which we can use to create an application context containing all the objects we need for all of the above test types. Note, however, that overusing @SpringBootTest might lead to very long-running test suites.
+
+So, for simple tests that cover multiple units we should rather create plain tests, very similar to unit tests, in which we manually create the object graph needed for the test and mock away the rest. This way, Spring doesn’t fire up a whole application context each time the test is started.
+
+**** Mais assunto sobre esse annotation
+
+*** o que faz o mockito?
+
+
+*** uso do @RunWith(PowerMockRunner.class)
+
+We need to prepare our test cases for working with PowerMockito by applying the following annotation:
+
+@RunWith(PowerMockRunner.class)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+** commit primeiro
+https://bitbucket.org/presenca/microservices/commits/a87a2f68d1d604e80f994710495e555207cc58ee
+** quando trabalhar na elaboração da publicação de tasks para o pessoal pegar
+	No segundo código que fiz (primeiro que comecei sozinho) eu obtive mensagens de erro diferentes para o rodar padrão e o rodar no modo debug. O do modo debug era mais preciso, e foi esse que o Fellipe postou no Jira. 
+	Portanto, é importante rodar os códigos que estão dando erro dos 2 modos.	
+
+
+* ultraaprendizado em Spring - me questionando
+
+
+
+
+Dao
+
+
+Dto
+
+
+
+Meu teste de admissão do Spring
+
+ClienteRepository
+ClienteService (
+ClienteResource
+------
+quem fica aguardando na porta a requisição?
+quem recebe os endpoints e diferencia GET/POST/PUT/DELETE ? controller. E esse controller fica dentro de qual pacote?
+Dentro do resources (no meu código) e no pacote controller (o portal da Nexti).
+
+O que define um controlador é a annotation: @RestController
+
+-----
+ClienteEntity existe?? Não, mas dentro do pacote domain nós colocamos a annotation @Entity para o JPA saber que é para armazená-la no db.
+** @Repository
+public interface ClienteRepository extends JpaRepository<Cliente, Integer> { ... }
+AP (hipótese inicial): Essa annotation é para ler no db. Por outro lado, ela também ajuda as @Entity a serem persistidas. Mas a @Entity depende da @Repository; o inverso não ocorre.
+
+** @RepositoryRestResource?
+*** No google
+@RepositoryRestResource is used to set options on the public Repository interface - it will automatically create endpoints as appropriate based on the type of Repository that is being extended (i.e. CrudRepository/PagingAndSortingRepository/etc).
+
+AP: Como nas interfaces do projeto Nexti usamos:
+		@RepositoryRestResource(exported = false)
+AP: não vai haver criar o endpoint
+
+*** A API do java trás:
+public @interface RepositoryRestResource
+Annotate a Repository with this to customize export mapping and rels.
+* começar o dia da segunda com os JUnits
+** trabalhar os filtros sem precisar do banco de daos
+public class ClienteResource {
+
+	@Autowired
+	private ClienteService service;
+	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
+	public ResponseEntity<Cliente> find(@PathVariable Integer id) { 				
+		Cliente obj = service.find(id); 
+------(NEXTI)//eu posso usar a
+@Autowired
+private CompanyService companyService;
+pra apagar o a company que tem filtros??
+Não, com certeza precisa do banco de dados. 
+        if (repo.deleteAllFiltersByCompany(companyId)) {
+Como instanciá-lo??
+/media/lucas/DRIVE_E/trabalho/Repositorios/presenca-microservices-c2d9e0d5fb43/core/src/main/java/com/nexti/core/server/repository/CompanyRepository.java
+
+ver
+/media/lucas/DRIVE_E/trabalho/Repositorios/presenca-microservices-c2d9e0d5fb43/core/src/test/java/com/nexti/core/server/service/AssetTypeServiceTest.java
+
+------
+
+		return ResponseEntity.ok().body(obj); // ok() para dizer que a operação ocorreu com sucesso,
+		// e a resposta terá como corpo o objeto 'obj'
+	}
+
+
+** adicionar no browser atalho do Jira:
+https://presenca.atlassian.net/jira/your-work
+* Conversar com a NEXTI
+** testar se roda o main do projeto main antes dos @tests (no meu desafio da Nexti roda)

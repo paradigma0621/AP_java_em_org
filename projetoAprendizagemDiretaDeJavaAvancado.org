@@ -1,0 +1,196 @@
+Comecei em 01/04/2021.
+
+ Do livro: Pergunte Mais (Ask More) – Frank Sesno: “O que você faria com a sua vida se soubesse que não pode falhar?” (ou em outros termos: o que você faria se soubesse que iria dar certo, com certeza?" R: Ter minha própria empresa de programação (esse propósito é de 31/03/2021 pra frente. 
+
+* História
+	Escrevi para 3 progamadores de Java experientes para que eles me dessem dicas para o caminho de estudo a seguir para me tornar um programador de Java Junior. Eu anotei as dicas deles no arquivo java.org. Estava traçado o caminho para aprender a partir das features do Java 8 pelos tutoriais da Oracle - tinha começado. Nesse mesmo dia que comecei (31/03/2021) eu li à noite o livro "Ultra-aprendizado" (Scott H. Young) - Cap 6 - pgs 107 à 126 que recomenda o aprendizado direto - decidi fazer o desafio de aprender Java assim por 1 mês.
+	Vou começar por assuntos que vi no código do RichTextFX e com assuntos que eu não entendo tão bem ainda.
+
+* tópicos a aprender
+** generics simples/duplos
+
+public final class Paragraph<S> implements CharSequence {
+    private final List<StyledText<S>> segments;
+--------------------------
+o que significa uma classe ter o generics? 
+public final class Paragraph<S> ???
+------------------------
+
+
+    static <S> StyleSpans<S> singleton(StyleSpan<S> span) {
+        return new SingletonSpans<>(span);
+    }
+
+    int length();	
+
+*** AP: Aprendizado 01:
+    static <S> StyleSpans<S> singleton(S style, int length) {
+        return singleton(new StyleSpan<>(style, length)); <-----******
+    }
+aqui ele está pedindo pra criar um objeto StyleSpan com argumentos para o construtor: (style, lenght).... ver a classe instanciada abaixo:
+	public class StyleSpan<S> {
+
+	    private final S style;
+        private final int length;
+
+    public StyleSpan(S style, int length) {
+        if(length < 0) {
+            throw new IllegalArgumentException("StyleSpan's length cannot be negative");
+        }
+
+        this.style = style;
+        this.length = length;
+    }
+
+*** AP: APrendizado 02: uso de um interpretador de estilo
+
+        public String toCss() {
+            StringBuilder sb = new StringBuilder();
+
+            if(bold.isPresent()) {
+                if(bold.get()) {
+                    sb.append("-fx-font-weight: bold;");
+                } else {
+                    sb.append("-fx-font-weight: normal;");
+                }
+            }
+
+            if(italic.isPresent()) {
+                if(italic.get()) {
+                    sb.append("-fx-font-style: italic;");
+                } else {
+                    sb.append("-fx-font-style: normal;");
+                }
+            }
+
+            if(underline.isPresent()) {
+                if(underline.get()) {
+                    sb.append("-fx-underline: true;");
+                } else {
+                    sb.append("-fx-underline: false;");
+                }
+            }
+
+            if(strikethrough.isPresent()) {
+                if(strikethrough.get()) {
+                    sb.append("-fx-strikethrough: true;");
+                } else {
+                    sb.append("-fx-strikethrough: false;");
+                }
+            }
+
+            if(fontSize.isPresent()) {
+                sb.append("-fx-font-size: " + fontSize.get() + "pt;");
+            }
+
+            if(fontFamily.isPresent()) {
+                sb.append("-fx-font-family: " + fontFamily.get() + ";");
+            }
+
+            if(textColor.isPresent()) {
+                Color color = textColor.get();
+                int red = (int) (color.getRed() * 255);
+                int green = (int) (color.getGreen() * 255);
+                int blue = (int) (color.getBlue() * 255);
+                sb.append("-fx-fill: rgb(" + red + ", " + green + ", " + blue + ")");
+            }
+
+            return sb.toString();
+        }
+
+** collections
+extends de list com 2 argumentos:
+ private static final List<CssMetaData<? extends Styleable, ?>> CSS_META_DATA_LIST;
+** observer
+** import java.util.Optional;
+    private final Optional<LineTerminator> terminator;
+dentro de: public final class Paragraph
+
+** import java.util.Iterator;
+ 
+public interface StyleSpans<S> extends Iterable<StyleSpan<S>>, TwoDimensional {
+
+** import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
+
+    default Stream<S> styleStream() {
+        return stream().map(span -> span.getStyle());
+    }
+
+** Optional
+
+ A container object which may or may not contain a non-null value. 
+If a value is present, isPresent() will return true and get() will return the value. 
+
+ orElse() (return adefault value if value not present) 
+ ifPresent() (execute a block of code if the value is present). 
+
+
+** syncronization
+** threads
+* fontes para aprender
+** collections
+https://github.com/eclipse/eclipse-collections
+https://docs.oracle.com/javase/tutorial/collections/
+* JavaFX .
+** JavaFX é um framework?
+JavaFX is a cross platform GUI toolkit for Java, and is the successor to the Java Swing libraries. (https://gamedevelopment.tutsplus.com/tutorials/introduction-to-javafx-for-game-development--cms-23835)
+** mais de um palco (Scene):
+A Scene object must be passed to the Stage (by the setScene() method) in order to be displayed.
+
+** desenhando as imagens do jogo
+Rendering Graphics
+Rendering graphics is particularly important to game programmers! In JavaFX, the Canvas object is an image on which we can draw text, shapes, and
+images, using its associated GraphicsContext object. (For those developers familiar with the Java Swing toolkit, this is similar to the Graphics object passed to the paint() method in the JFrame class.)
+
+** Rendering Graphics
+Rendering graphics is particularly important to game programmers! In JavaFX,
+the Canvas object is an image on which we can draw text, shapes, and
+images, using its associated GraphicsContext object. (For those developers
+familiar with the Java Swing toolkit, this is similar to the Graphics object
+passed to the
+paint()
+method in the JFrame class.)The GraphicsContext object contains a wealth of powerful customization
+abilities. To choose colors for drawing text and shapes, you can set the fill
+(interior) and stroke (border) colors, which are Paint objects: these can be a
+single solid Color, a user-defined gradient
+(either LinearGradient or RadialGradient), or even an ImagePattern. You can
+also apply one or more Effect style objects, such as Lighting, Shadow,
+or GaussianBlur, and change fonts from the default by using the Font class.
+The Image class makes it easy to load images from a variety of formats from
+files and draw them via the GraphicsContext class. It's easy to construct
+procedurally generated images by using the WritableImage class together with
+the PixelReader and PixelWriter classes.
+* aprendizado do uso do Eclipse
+** apertar CTRL+C em uma palavra faz que todas as ocorrencias dessa palavra fiquem cinza
+* Dúvidas pessoais de boas práticas em Java
+** Quando eu não sei qual o tamanho do vetor, "palavras" nesse caso:
+(tirado do projeto Memorize pro Console: 
+/media/saul/DRIVE_E/java/workspaces-eclipse/duvidas/Memorize      
+dentro do arquivo: controller/LoadDataBase.java
+)
+public class Data {
+    public String palavras[] = null;
+--------
+	pois quando eu fizer uma atribuição depois de:
+		    fileText = formattedString.split(" <LF> ");  //formattedString tem todo o texto de um doc .txt
+ 		    return fileText;
+	para que
+	  	dados1.palavras = unmount(lerArq);  //obs: o método unmount que dá o retorno "return fileText;" acima
+	com isso eu vi que palavras[] vai ter o mesmo tamanho que fileText. Se eu especificasse antes o tamanho:  String palavras[XX] poderia dar bufferOverflow ou ficar indíces sobrando. Especificá-lo então como null é boa prática?
+
+
+
+	Ainda desse mesmo código:
+		public String[] unmount(BufferedReader reader1) { 
+		    int s1 = 0;
+		    String formattedString = "";     // <--- deixa como null? Dá na mesma?
+		    String fileText[] = null;        //  <---- deixar como null mesmo??? Não sei qual será o número do vetor
+						     // gerado posteriormetne no fileText = formattedString.split(" <LF> ");
+		    try {
+			    while ((s1 = reader1.read()) != -1) {
+			...		
+
+	Nesse projeto fica salvo dentro da variável dados1.palavras[] as linhas do arquivo de entrada. O que pode ter um exemplo de resultado com: 
+			System.out.println(dados1.palavras[2]);
+			System.out.println(dados1.palavras[3]);	
