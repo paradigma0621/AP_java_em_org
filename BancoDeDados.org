@@ -1,0 +1,22 @@
+essa query:  
+select * FROM person per 
+         LEFT JOIN customer cus ON cus.id = per.customer_id AND cus.id = 18
+vai pegar todos resultados onde cus.id = per.customer_id e todos os cud.id possíveis (não apenas os 18). Isso por causa do LEFT JOIN no começo.
+
+Para ter uma persquisa onde serão pegos todos os customer.id = person.customer_id
+E com customer.id = 18... deve-se usar:
+
+	select * FROM person AS per 
+         INNER JOIN customer AS cus ON cus.id = per.customer_id AND cus.id = 18
+
+
+         
+------------------------------------------
+-- Essa roda rápido: (pega os clocking com data inicial 2022-01-10 da person_id 13...
+SELECT x.* FROM nexti.clocking x
+WHERE person_id = 1359166 AND clocking_date > '2022-01-10'
+ORDER BY x.clocking_date
+
+ou
+-- mostra os clockings em ordem decrescente
+SELECT x.* FROM nexti.clocking x ORDER BY id DESC   

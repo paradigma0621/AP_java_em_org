@@ -1,7 +1,3 @@
-Comecei em 01/04/2021.
-
- Do livro: Pergunte Mais (Ask More) – Frank Sesno: “O que você faria com a sua vida se soubesse que não pode falhar?” (ou em outros termos: o que você faria se soubesse que iria dar certo, com certeza?" R: Ter minha própria empresa de programação (esse propósito é de 31/03/2021 pra frente. 
-
 * História
 	Escrevi para 3 progamadores de Java experientes para que eles me dessem dicas para o caminho de estudo a seguir para me tornar um programador de Java Junior. Eu anotei as dicas deles no arquivo java.org. Estava traçado o caminho para aprender a partir das features do Java 8 pelos tutoriais da Oracle - tinha começado. Nesse mesmo dia que comecei (31/03/2021) eu li à noite o livro "Ultra-aprendizado" (Scott H. Young) - Cap 6 - pgs 107 à 126 que recomenda o aprendizado direto - decidi fazer o desafio de aprender Java assim por 1 mês.
 	Vou começar por assuntos que vi no código do RichTextFX e com assuntos que eu não entendo tão bem ainda.
