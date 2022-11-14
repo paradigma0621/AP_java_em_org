@@ -893,6 +893,12 @@ difference.removeAll(s2);
 The implementation type of the result Set in the preceding idioms is HashSet, which is, as already mentioned, the best all-around Set implementation in the Java platform. However, any general-purpose Set implementation could be substituted.
 *** Map
 a Map is not a true Collection.
+
+**** exemplo de uso
+        LinkedHashMap<String, Object> obj = new LinkedHashMap();
+		Integer code = new Integer(2);
+        obj.put("code", code);
+
 *** Sorted Collections
 
 ****    SortedSet — a Set that maintains its elements in ascending order. Several additional operations are provided to take advantage of the ordering. Sorted sets are used for naturally ordered sets, such as word lists and membership rolls. Also see The SortedSet Interface section.
@@ -1634,6 +1640,69 @@ Obviously, you can write your own classes that contain constants and static meth
 
 import static mypackage.MyConstants.*;
 Note: Use static import very sparingly. Overusing static import can result in code that is difficult to read and maintain, because readers of the code won't know which class defines a particular static object. Used properly, static import makes code more readable by removing class name repetition.
+** Regex
+Uma expressão regular (ou, um padrão) descreve um conjunto de cadeias de caracteres, de forma concisa, sem precisar listar todos os elementos do conjunto. Por exemplo, um conjunto contendo as cadeias "Handel", "Händel" e "Haendel" pode ser descrito pelo padrão H(ä|ae?)ndel. A maioria dos formalismos provê pelo menos três operações para construir expressões regulares.
+
+*** Alternância
+Uma barra vertical (|) separa alternativas. Por exemplo, psicadélico|psicodélico pode casar "psicadélico" ou "psicodélico".
+
+*** Agrupamento
+Parênteses ((, )) são usados para definir o escopo e a precedência de operadores, entre outros usos. Por exemplo, psicadélico|psicodélico e psic(a|o)délico são equivalentes e ambas descrevem "psicadélico" e "psicodélico".
+
+*** Quantificação (ou repetição)
+Um quantificador após um token (como um caractere) ou agrupamento especifica a quantidade de vezes que o elemento precedente pode ocorrer. Os quantificadores mais comuns são o ponto de interrogação ?, o asterisco * e o sinal de adição +.
+
+**** ?: indica que há zero ou uma ocorrência do elemento precedente. Por exemplo, ac?ção casa tanto "acção" quanto "ação".
+
+**** *: indica que há zero ou mais ocorrências do elemento precedente. Por exemplo, ab*c casa "ac", "abc", "abbc", "abbbc", e assim por diante.
+
+**** +: indica que há uma ou mais ocorrências do elemento precedente. Por exemplo, ab+c casa "abc", "abbc", "abbbc", e assim por diante, mas não "ac".
+
+**** {n, m} - de n até m ocorrências.
+
+Essas construções podem ser combinadas arbitrariamente para formar expressões complexas, assim como expressões aritméticas com números e operações de adição, subtração, multiplicação e divisão. De forma geral, há diversas expressões regulares para descrever um mesmo conjunto de cadeias de caracteres. A sintaxe exata da expressão regular e os operadores disponíveis variam entre as implementações.
+
+exemplo:
+pattern: /\d{3}\.?\d{3}\.?\d{3}-?\d{2}/
+string:  825.531.760-07
+matches: ^^^^^^^^^^^^^^
+string:  18646661024
+matches: ^^^^^^^^^^^
+
+**** Aplicações exemplo
+  private static final String NUMBER_REGEX =
+      "\\s*"      // any amount of whitespace
+      + "-?"      // optional negative sign
+      + "\\d+"    // one or more digits
+      + "(:?"     // start of factional part
+      + "\\."   // literal period
+      + "\\d+"  // one or more digits
+      + ")?"      // fractional part is optional
+      + "\\s*";   // any amount of whitespace
+
+**** Outros metacaracteres
+***** Padrões individuais
+****** . Ele funciona como um curinga, sendo capaz de dar match em qualquer caractere. 
+Algumas implementações excluem quebra de linha e codificação de caracteres. Nas expressões POSIX de listas de caracteres, o caractere ponto é tratado como o literal. Por exemplo, a.c casa "abc", etc., mas [a.c] casa somente "a", "." ou "c".
+
+Visto isso, você deve estar se perguntando: Como pegar a forma literal do ponto? Eis que é muito simples bastando usar um escape \ mais o metacaractere desejado. 
+
+
+****** [ ]	Lista de caracteres. Casa uma ocorrência de qualquer caractere contido na lista. Por exemplo, [abc] casa "a", "b" ou "c". É possível definir intervalos de caracteres: [a-z] casa qualquer caractere de "a" a "z", e [0123456789] é igual a [0-9]. O caractere - é tratado como literal se for o primeiro ou o último da lista, ou se for escapado: [abc-], [-abc] ou [a\-bc].
+****** [^ ]	Lista negada de caracteres. Casa uma ocorrência de qualquer caractere não contido na lista. Por exemplo, [^abc] casa qualquer caractere que não seja "a", "b" ou "c". [^a-z] casa qualquer caractere que não esteja em caixa baixa.
+***** Âncoras
+
+Podemos lidar com o início e fim de uma linha. 
+Usamos a meta ^ para indicar o início de uma linha e $ indicando o fim de uma linha. 
+
+****** ^	Casa o começo da cadeia de caracteres. Numa situação de múltiplas linhas, casa o começo das linhas. Logo percebe-se que as âncoras não casam pedaços do texto, elas servem apenas como uma referência.
+****** $	Casa o fim da cadeia de caracteres ou a posição logo antes da quebra de linha do fim da cadeia. Numa situação de múltiplas linhas, casa o fim das linhas.
+**** exemplo de aplicação: validade de email:
+Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
+**** exemplo de aplicação: valida de data: 2 dígitos pro mês + "-" + 4 dígitos pro ano (ex: 07-2018). (Autoria: Fellipe Martins)
+public static final Pattern VALID_PERIOD = Pattern.compile("^(0?[1-9]|1[012])-20\\d{2}$", Pattern.CASE_INSENSITIVE);
+
+    
 * Optional
 ** fontes: 
 https://blog.algaworks.com/chega-de-nullpointerexception/
