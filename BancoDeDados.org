@@ -20,3 +20,12 @@ ORDER BY x.clocking_date
 ou
 -- mostra os clockings em ordem decrescente
 SELECT x.* FROM nexti.clocking x ORDER BY id DESC   
+-------------------------------------------------
+
+* Indexes
+** tipos
+The best way to improve the performance of SELECT operations is to create indexes on one or more of the columns that are tested in the query. The index entries act like pointers to the table rows, allowing the query to quickly determine which rows match a condition in the WHERE clause, and retrieve the other column values for those rows. *All MySQL data types can be indexed.*
+
+** exemplos 
+Most MySQL indexes (PRIMARY KEY, UNIQUE, INDEX, and FULLTEXT) are stored in B-trees. (Obs: B-tree não é sinônimo de árvore binária).
+
